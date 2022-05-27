@@ -1,4 +1,4 @@
-import std/strutils
+import std/[strutils, sugar]
 import tinyfiledialogs/bindings
 export bindings
 
@@ -15,31 +15,40 @@ proc messageBox*(title, message, dialogType, iconType: string, defaultButton: ra
 proc inputBox*(title, message, defaultInput: string): string = 
   $tinyfd_inputBox(cstring title, cstring message, cstring defaultInput)
 
-proc saveFileDialog*(title, defaultPathAndFile: string, filterPatterns: openArray[cstring], singleFilterDescription: string = ""): string = 
+proc saveFileDialog*(title, defaultPathAndFile: string, filterPatterns: openArray[string], singleFilterDescription: string = ""): string = 
+  let filterPatterns = collect:
+    for patt in filterPatterns: cstring patt
+
   $tinyfd_saveFileDialog(
     cstring title, 
     cstring defaultPathAndFile, 
     cint filterPatterns.len, 
-    cast[ptr ptr cschar](filterPatterns.unsafeAddr), 
+    cast[ptr ptr cschar](filterPatterns[0].unsafeAddr), 
     cstring singleFilterDescription
   )
 
-proc openFileDialog*(title, defaultPathAndFile: string, filterPatterns: openArray[cstring], singleFilterDescription: string = ""): string = 
+proc openFileDialog*(title, defaultPathAndFile: string, filterPatterns: openArray[string], singleFilterDescription: string = ""): string = 
+  let filterPatterns = collect:
+    for patt in filterPatterns: cstring patt
+
   $tinyfd_openFileDialog(
     cstring title, 
     cstring defaultPathAndFile, 
     cint filterPatterns.len, 
-    cast[ptr ptr cschar](filterPatterns.unsafeAddr), 
+    cast[ptr ptr cschar](filterPatterns[0].unsafeAddr), 
     cstring singleFilterDescription, 
     0
   )
 
-proc openMultipleFilesDialog*(title, defaultPathAndFile: string, filterPatterns: openArray[cstring], singleFilterDescription: string = ""): seq[string] = 
+proc openMultipleFilesDialog*(title, defaultPathAndFile: string, filterPatterns: openArray[string], singleFilterDescription: string = ""): seq[string] = 
+  let filterPatterns = collect:
+    for patt in filterPatterns: cstring patt
+
   let paths = tinyfd_openFileDialog(
     cstring title, 
     cstring defaultPathAndFile, 
     cint filterPatterns.len, 
-    cast[ptr ptr cschar](filterPatterns.unsafeAddr), 
+    cast[ptr ptr cschar](filterPatterns[0].unsafeAddr), 
     cstring singleFilterDescription, 
     1
   )

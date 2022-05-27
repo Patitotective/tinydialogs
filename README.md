@@ -6,12 +6,13 @@
 import std/os
 import tinyfiledialogs
 
-echo notifyPopup("Message", "You just received a message from Beef", "info")
+beep()
+notifyPopup("Message", "You just received a message from Beef", "info")
 echo messageBox("Hey", "Do you want to receive more notifications?", "yesno", "question", 1)
 echo inputBox("Name", "Please enter your password :]", "")
-echo saveFileDialog("Save the file", getCurrentDir() / "\0", [cstring"*.txt", cstring"*.text"], "Text file") # "\0" for an emtpy file
-echo openFileDialog("Open the file", getCurrentDir() / "\0", [cstring"*.txt", cstring"*.text"], "Text file")
-echo openMultipleFilesDialog("Open the files", getCurrentDir() / "\0", [cstring"*.txt", cstring"*.text"], "Text files")
+echo saveFileDialog("Save the file", getCurrentDir() / "\0", ["*.txt", "*.text"], "Text file") # "\0" for an emtpy file
+echo openFileDialog("Open the file", getCurrentDir() / "\0", ["*.txt", "*.text"], "Text file")
+echo openMultipleFilesDialog("Open the files", getCurrentDir() / "\0", ["*.txt", "*.text"], "Text files")
 echo selectFolderDialog("Open the directory of the file", getCurrentDir())
 echo colorChooser("Choose a color")
 echo colorChooser("Choose a color", "#000000") # Hex
@@ -19,6 +20,12 @@ echo colorChooser("Choose a color", [0u8, 0u8, 0u8]) # RGB
 ```
 
 ## Docs
+### `beep`
+```nim
+proc beep()
+```
+A beep sound.
+
 ### `notifyPopup`
 ```nim
 proc notifyPopup(title, message, iconType: string): int
@@ -45,7 +52,7 @@ proc inputBox(title, message, defaultInput: string): string
 
 ### `saveFileDialog`
 ```nim
-proc saveFileDialog(title, defaultPathAndFile: string, filterPatterns: openArray[cstring], singleFilterDescription: string = ""): string
+proc saveFileDialog(title, defaultPathAndFile: string, filterPatterns: openArray[string], singleFilterDescription: string = ""): string
 ```
 - `defaultPathAndFile`: For an empty "file" use a trailing slash `dir/` (or using `std/os` `"dir" / "\0"`).
 - `filterPatterns`: e.i.: `["*.txt", "*.text"]`.
@@ -55,7 +62,7 @@ Returns the selected file path (empty string when cancelled).
 
 ### `openFileDialog`
 ```nim
-proc openFileDialog(title, defaultPathAndFile: string, filterPatterns: openArray[cstring], singleFilterDescription: string = ""): string
+proc openFileDialog(title, defaultPathAndFile: string, filterPatterns: openArray[string], singleFilterDescription: string = ""): string
 ```
 - `defaultPathAndFile`: For an empty "file" use a trailing slash `dir/` (or using `std/os` `"dir" / "\0"`).
 - `filterPatterns`: e.i.: `["*.txt", "*.text"]`.
@@ -65,7 +72,7 @@ Returns the selected file path (empty string when cancelled).
 
 ### `openMultipleFilesDialog`
 ```nim
-proc openMultipleFilesDialog(title, defaultPathAndFile: string, filterPatterns: openArray[cstring], singleFilterDescription: string = ""): seq[string]
+proc openMultipleFilesDialog(title, defaultPathAndFile: string, filterPatterns: openArray[string], singleFilterDescription: string = ""): seq[string]
 ```
 - `defaultPathAndFile`: For an empty "file" use a trailing slash `dir/` (or using `std/os` `"dir" / "\0"`).
 - `filterPatterns`: e.i.: `["*.txt", "*.text"]`.

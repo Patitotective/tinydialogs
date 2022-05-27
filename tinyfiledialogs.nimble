@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.1.0"
+version       = "0.1.1"
 author        = "Patitotective"
 description   = "Tiny file dialogs bindings for Nim"
 license       = "MIT"
