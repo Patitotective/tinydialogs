@@ -6,7 +6,7 @@ export bindings
 
 proc beep*() = tinyfd_beep()
 
-proc notifyPopup*(title, message, iconType: string): int = 
+proc notifyPopup*(title, message, iconType: string): int {.discardable.} = 
   tinyfd_notifyPopup(cstring title, cstring message, cstring iconType)
 
 proc messageBox*(title, message, dialogType, iconType: string, defaultButton: range[0..2]): int = 
