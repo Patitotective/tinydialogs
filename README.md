@@ -34,45 +34,50 @@ proc messageBox(title, message, dialogType, iconType: string, defaultButton: ran
 - `dialogType`: `"ok"`, `"okcancel"`, `"yesno"` or `"yesnocancel"`.
 - `iconType`: `"info"`, `"warning"`, `"error"` or `"question"`.
 - `defaultButton`: `0` for cancel/no, `1` for ok/yes or `2` for no in `yesnocancel`.
+Returns `0` for cancel/no, `1` for ok/yes or `2` for no in `yesnocancel`.
 
 ### `inputBox`
 ```nim
 proc inputBox(title, message, defaultInput: string): string
 ```
 - `message`: `\n\t` have no effect.
-- `defaultInput`: `""` for a password box or something else for an input box. (See https://github.com/Patitotective/nim_tinyfiledialogs/issues/1)
+- `defaultInput`: `""` for a password box or something else for an input box. (See https://github.com/Patitotective/tinyfiledialogs.nim/issues/1)
 
 ### `saveFileDialog`
 ```nim
 proc saveFileDialog(title, defaultPathAndFile: string, filterPatterns: openArray[cstring], singleFilterDescription: string = ""): string
 ```
-- `defaultPathAndFile`: For an emtpy "file" use a trailing slash `dir/` (or using `std/os` `"dir" / "\0"`).
+- `defaultPathAndFile`: For an empty "file" use a trailing slash `dir/` (or using `std/os` `"dir" / "\0"`).
 - `filterPatterns`: e.i.: `["*.txt", "*.text"]`.
 - `singleFilterDescriptor`: Text to show instead of the `filterPatterns`.
-**NOTE:** tinyfiledialogs at the moment only supports one filter. `filterPatterns` are a single filter.
+Returns the selected file path (empty string when cancelled).  
+**NOTE:** tinyfiledialogs at the moment only supports one filter. `filterPatterns` are for a single filter.
 
 ### `openFileDialog`
 ```nim
 proc openFileDialog(title, defaultPathAndFile: string, filterPatterns: openArray[cstring], singleFilterDescription: string = ""): string
 ```
-- `defaultPathAndFile`: For an emtpy "file" use a trailing slash `dir/` (or using `std/os` `"dir" / "\0"`).
+- `defaultPathAndFile`: For an empty "file" use a trailing slash `dir/` (or using `std/os` `"dir" / "\0"`).
 - `filterPatterns`: e.i.: `["*.txt", "*.text"]`.
 - `singleFilterDescriptor`: Text to show instead of the `filterPatterns`.
+Returns the selected file path (empty string when cancelled).  
 **NOTE:** tinyfiledialogs at the moment only supports one filter. `filterPatterns` are a single filter.
 
 ### `openMultipleFilesDialog`
 ```nim
 proc openMultipleFilesDialog(title, defaultPathAndFile: string, filterPatterns: openArray[cstring], singleFilterDescription: string = ""): seq[string]
 ```
-- `defaultPathAndFile`: For an emtpy "file" use a trailing slash `dir/` (or using `std/os` `"dir" / "\0"`).
+- `defaultPathAndFile`: For an empty "file" use a trailing slash `dir/` (or using `std/os` `"dir" / "\0"`).
 - `filterPatterns`: e.i.: `["*.txt", "*.text"]`.
 - `singleFilterDescriptor`: Text to show instead of the `filterPatterns`.
+Returns the selected file path (empty string when cancelled).  
 **NOTE:** tinyfiledialogs at the moment only supports one filter. `filterPatterns` are a single filter.
 
 ### `selectFolderDialog`
 ```nim
 proc selectFolderDialog(title, defaultPath: string): string
 ```
+Returns the selected file path (empty string when cancelled).  
 
 ### `colorChooser`
 ```nim
