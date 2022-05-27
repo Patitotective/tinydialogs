@@ -4,7 +4,7 @@
 ## Example
 ```nim
 import std/os
-import nim_tinyfiledialogs
+import tinyfiledialogs
 
 echo notifyPopup("Message", "You just received a message from Beef", "info")
 echo messageBox("Hey", "Do you want to receive more notifications?", "yesno", "question", 1)
