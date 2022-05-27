@@ -10,4 +10,5 @@ skipFiles     = @["nim_tinyfiledialogs/gen.nim"]
 # Dependencies
 
 requires "nim >= 1.6.4"
-requires "futhark >= 0.5.1"
+# To generate the bindings
+# requires "futhark >= 0.5.1"

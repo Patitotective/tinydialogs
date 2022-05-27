@@ -1,10 +1,7 @@
-import std/[strutils,os]
 import futhark
 
-const sysPath {.strdefine.} = "/usr/lib/clang/14/include"
-
 importc:
-  sysPath sysPath
+  sysPath "/usr/lib/clang/14/include"
   path "tinyfiledialogs"
   define TINYFD_IMPLEMENTATION
   "tinyfiledialogs.h"
