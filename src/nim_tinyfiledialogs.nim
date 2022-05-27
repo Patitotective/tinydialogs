@@ -1,13 +1,8 @@
 import std/strutils
-import futhark
+import nim_tinyfiledialogs/bindings
+export bindings
 
-importc:
-  sysPath "/usr/lib/clang/14/include"
-  path "."
-  define TINYFD_IMPLEMENTATION
-  "tinyfiledialogs/tinyfiledialogs.h"
-
-{.compile: "tinyfiledialogs/tinyfiledialogs.c".}
+{.compile: "nim_tinyfiledialogs/tinyfiledialogs/tinyfiledialogs.c".}
 
 proc beep*() = tinyfd_beep()
 
@@ -63,4 +58,3 @@ proc colorChooser*(title: string, defaultRGB: array[3, byte]): tuple[hex: string
   var rgb: array[3, cuchar]
   result.hex = $tinyfd_colorChooser(title, nil, cast[array[3, cuchar]](defaultRGB), rgb)
   result.rgb = cast[array[3, byte]](rgb)
-

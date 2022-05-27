@@ -1,4 +1,3 @@
-
 from macros import hint
 
 when not declared(tinyfdverbose):
