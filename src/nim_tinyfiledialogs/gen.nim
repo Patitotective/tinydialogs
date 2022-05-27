@@ -5,6 +5,6 @@ const sysPath {.strdefine.} = "/usr/lib/clang/14/include"
 
 importc:
   sysPath sysPath
-  path "./tinyfiledialogs"
+  path "tinyfiledialogs"
   define TINYFD_IMPLEMENTATION
   "tinyfiledialogs.h"
