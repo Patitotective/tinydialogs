@@ -1,4 +1,4 @@
-# nim_tinyfiledialogs
+# tinyfiledialogs
 [Tiny file dialogs](https://sourceforge.net/projects/tinyfiledialogs) _v3.8.8_ Nim bindings.
 
 ## Example

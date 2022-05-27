@@ -5,7 +5,7 @@ author        = "Patitotective"
 description   = "Tiny file dialogs bindings for Nim"
 license       = "MIT"
 srcDir        = "src"
-skipFiles     = @["nim_tinyfiledialogs/gen.nim"]
+skipFiles     = @["tinyfiledialogs/gen.nim"]
 
 # Dependencies
 
