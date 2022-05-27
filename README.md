@@ -1,10 +1,10 @@
-# tinyfiledialogs
+# tinydialogs
 [Tiny file dialogs](https://sourceforge.net/projects/tinyfiledialogs) _v3.8.8_ Nim bindings.
 
 ## Example
 ```nim
 import std/os
-import tinyfiledialogs
+import tinydialogs
 
 beep()
 notifyPopup("Message", "You just received a message from Beef", "info")
@@ -48,7 +48,7 @@ Returns `0` for cancel/no, `1` for ok/yes or `2` for no in `yesnocancel`.
 proc inputBox(title, message, defaultInput: string): string
 ```
 - `message`: `\n\t` have no effect.
-- `defaultInput`: `""` for a password box or something else for an input box. (See https://github.com/Patitotective/tinyfiledialogs.nim/issues/1)
+- `defaultInput`: `""` for a password box or something else for an input box. (See https://github.com/Patitotective/tinydialogs/issues/1)
 
 ### `saveFileDialog`
 ```nim

@@ -1,8 +1,8 @@
 import std/[strutils, sugar]
-import tinyfiledialogs/bindings
+import tinydialogs/bindings
 export bindings
 
-{.compile: "tinyfiledialogs/tinyfiledialogs/tinyfiledialogs.c".}
+{.compile: "tinydialogs/tinyfiledialogs/tinyfiledialogs.c".}
 
 proc beep*() = tinyfd_beep()
 
