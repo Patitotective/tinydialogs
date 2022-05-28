@@ -2,6 +2,9 @@ import std/[strutils, sugar]
 import tinydialogs/bindings
 export bindings
 
+when defined(Windows):
+  {.passL: "-LC:/mingw/lib -lcomdlg32 -lole32".}
+
 {.compile: "tinydialogs/tinyfiledialogs/tinyfiledialogs.c".}
 
 proc beep*() = tinyfd_beep()
