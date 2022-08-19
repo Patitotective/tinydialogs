@@ -1,0 +1,19 @@
+tinyfdverbose	tinydialogs/bindings.html#tinyfdverbose	bindings: tinyfdverbose	
+tinyfdassumegraphicdisplay	tinydialogs/bindings.html#tinyfdassumegraphicdisplay	bindings: tinyfdassumegraphicdisplay	
+tinyfdcolorchooser	tinydialogs/bindings.html#tinyfdcolorchooser,cstring,cstring,array[,cuchar],array[,cuchar]	bindings: tinyfdcolorchooser(atitle: cstring; adefaulthexrgb: cstring;\n                   adefaultrgb: array[3&apos;i64, cuchar];\n                   aoresultrgb: array[3&apos;i64, cuchar]): cstring	
+tinyfdresponse	tinydialogs/bindings.html#tinyfdresponse	bindings: tinyfdresponse	
+tinyfdsavefiledialog	tinydialogs/bindings.html#tinyfdsavefiledialog,cstring,cstring,cint,ptr.ptr.cschar,cstring	bindings: tinyfdsavefiledialog(atitle: cstring; adefaultpathandfile: cstring;\n                     anumoffilterpatterns: cint;\n                     afilterpatterns: ptr ptr cschar;\n                     asinglefilterdescription: cstring): cstring	
+tinyfdsilent	tinydialogs/bindings.html#tinyfdsilent	bindings: tinyfdsilent	
+tinyfdselectfolderdialog	tinydialogs/bindings.html#tinyfdselectfolderdialog,cstring,cstring	bindings: tinyfdselectfolderdialog(atitle: cstring; adefaultpath: cstring): cstring	
+tinyfdgetglobalint	tinydialogs/bindings.html#tinyfdgetglobalint,cstring	bindings: tinyfdgetglobalint(aintvariablename: cstring): cint	
+tinyfdbeep	tinydialogs/bindings.html#tinyfdbeep	bindings: tinyfdbeep(): void	
+tinyfdneeds	tinydialogs/bindings.html#tinyfdneeds	bindings: tinyfdneeds	
+tinyfdinputbox	tinydialogs/bindings.html#tinyfdinputbox,cstring,cstring,cstring	bindings: tinyfdinputbox(atitle: cstring; amessage: cstring; adefaultinput: cstring): cstring	
+tinyfdallowcursesdialogs	tinydialogs/bindings.html#tinyfdallowcursesdialogs	bindings: tinyfdallowcursesdialogs	
+tinyfdnotifypopup	tinydialogs/bindings.html#tinyfdnotifypopup,cstring,cstring,cstring	bindings: tinyfdnotifypopup(atitle: cstring; amessage: cstring; aicontype: cstring): cint	
+tinyfdversion	tinydialogs/bindings.html#tinyfdversion	bindings: tinyfdversion	
+tinyfdsetglobalint	tinydialogs/bindings.html#tinyfdsetglobalint,cstring,cint	bindings: tinyfdsetglobalint(aintvariablename: cstring; avalue: cint): cint	
+tinyfdforceconsole	tinydialogs/bindings.html#tinyfdforceconsole	bindings: tinyfdforceconsole	
+tinyfdmessagebox	tinydialogs/bindings.html#tinyfdmessagebox,cstring,cstring,cstring,cstring,cint	bindings: tinyfdmessagebox(atitle: cstring; amessage: cstring; adialogtype: cstring;\n                 aicontype: cstring; adefaultbutton: cint): cint	
+tinyfdopenfiledialog	tinydialogs/bindings.html#tinyfdopenfiledialog,cstring,cstring,cint,ptr.ptr.cschar,cstring,cint	bindings: tinyfdopenfiledialog(atitle: cstring; adefaultpathandfile: cstring;\n                     anumoffilterpatterns: cint;\n                     afilterpatterns: ptr ptr cschar;\n                     asinglefilterdescription: cstring;\n                     aallowmultipleselects: cint): cstring	
+tinyfdgetglobalchar	tinydialogs/bindings.html#tinyfdgetglobalchar,cstring	bindings: tinyfdgetglobalchar(acharvariablename: cstring): cstring	
