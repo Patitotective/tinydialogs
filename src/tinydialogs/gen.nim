@@ -1,3 +1,4 @@
+# Run this file in order to generate the bindings. They are generated at the nim cache directory.
 import futhark
 
 importc:
