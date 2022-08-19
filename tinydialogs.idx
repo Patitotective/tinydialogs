@@ -22,3 +22,4 @@ openMultipleFilesDialog	tinydialogs.html#openMultipleFilesDialog,string,string,o
 selectFolderDialog	tinydialogs.html#selectFolderDialog,string,string	tinydialogs: selectFolderDialog(title, defaultPath: string): string	
 colorChooser	tinydialogs.html#colorChooser,string,string	tinydialogs: colorChooser(title, defaultHexRGB = &quot;&quot;): tuple[hex: string, rgb: array[3, byte]]	
 colorChooser	tinydialogs.html#colorChooser,string,array[,byte]	tinydialogs: colorChooser(title: string; defaultRGB: array[3, byte]): tuple[hex: string,\n    rgb: array[3, byte]]	
+Example	tinydialogs.html#example	  Example	
