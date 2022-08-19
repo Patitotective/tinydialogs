@@ -1,5 +1,6 @@
-## [Tiny file dialogs](https://sourceforge.net/projects/tinyfiledialogs) _v3.8.8_ Nim bindings.
-## Example
+## [Tiny file dialogs](https://sourceforge.net/projects/tinyfiledialogs) v3.8.8 Nim bindings.
+## 
+## ## Example
 ## ```nim
 ## import std/os
 ## import tinydialogs
