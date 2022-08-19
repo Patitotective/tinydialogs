@@ -19,7 +19,7 @@ echo colorChooser("Choose a color", "#000000") # Hex
 echo colorChooser("Choose a color", [0u8, 0u8, 0u8]) # RGB
 ```
 
-Read more at the [docs](https://patitotective.github.io/tinydialogs)
+Read more at the [docs](https://patitotective.github.io/tinydialogs).
 
 ## About
 - GitHub: https://github.com/Patitotective/ImTemplate.
