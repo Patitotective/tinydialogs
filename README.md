@@ -23,7 +23,7 @@ Read more at the [docs](https://patitotective.github.io/tinydialogs).
 
 ## About
 - GitHub: https://github.com/Patitotective/ImTemplate.
-- Discord: https://discord.gg/gdcPVjazCG.
+- Discord: https://discord.gg/U23ZQMsvwc.
 
 Contact me:
 - Discord: **Patitotective#0127**.
