@@ -97,22 +97,26 @@
 
 </ul>
 <ul class="simple nested-toc-section">openFileDialog
-  <li><a class="reference" href="#openFileDialog%2Cstring%2Cstring%2CopenArray%5Bstring%5D%2Cstring" title="openFileDialog(title, defaultPath: string; filterPatterns: openArray[string];
-               singleFilterDescription = &quot;&quot;): string">openFileDialog(title, defaultPath: string; filterPatterns: openArray[string];
+  <li><a class="reference" href="#openFileDialog%2Cstring%2Cstring%2CopenArray%5Bstring%5D%2Cstring" title="openFileDialog(title, defaultPath: string;
+               filterPatterns: openArray[string] = [];
+               singleFilterDescription = &quot;&quot;): string">openFileDialog(title, defaultPath: string;
+               filterPatterns: openArray[string] = [];
                singleFilterDescription = &quot;&quot;): string</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">openMultipleFilesDialog
   <li><a class="reference" href="#openMultipleFilesDialog%2Cstring%2Cstring%2CopenArray%5Bstring%5D%2Cstring" title="openMultipleFilesDialog(title, defaultPath: string;
-                        filterPatterns: openArray[string];
+                        filterPatterns: openArray[string] = [];
                         singleFilterDescription = &quot;&quot;): seq[string]">openMultipleFilesDialog(title, defaultPath: string;
-                        filterPatterns: openArray[string];
+                        filterPatterns: openArray[string] = [];
                         singleFilterDescription = &quot;&quot;): seq[string]</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">saveFileDialog
-  <li><a class="reference" href="#saveFileDialog%2Cstring%2Cstring%2CopenArray%5Bstring%5D%2Cstring" title="saveFileDialog(title, defaultPath: string; filterPatterns: openArray[string];
-               singleFilterDescription = &quot;&quot;): string">saveFileDialog(title, defaultPath: string; filterPatterns: openArray[string];
+  <li><a class="reference" href="#saveFileDialog%2Cstring%2Cstring%2CopenArray%5Bstring%5D%2Cstring" title="saveFileDialog(title, defaultPath: string;
+               filterPatterns: openArray[string] = [];
+               singleFilterDescription = &quot;&quot;): string">saveFileDialog(title, defaultPath: string;
+               filterPatterns: openArray[string] = [];
                singleFilterDescription = &quot;&quot;): string</a></li>
 
 </ul>
@@ -148,7 +152,7 @@
 <span class="Identifier">echo</span> <span class="Identifier">inputBox</span><span class="Punctuation">(</span><span class="StringLit">&quot;Name&quot;</span><span class="Punctuation">,</span> <span class="StringLit">&quot;Please enter your password :]&quot;</span><span class="Punctuation">,</span> <span class="StringLit">&quot;&quot;</span><span class="Punctuation">)</span>
 <span class="Identifier">echo</span> <span class="Identifier">saveFileDialog</span><span class="Punctuation">(</span><span class="StringLit">&quot;Save the file&quot;</span><span class="Punctuation">,</span> <span class="Identifier">getCurrentDir</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Operator">/</span> <span class="StringLit">&quot;</span><span class="EscapeSequence">\0</span><span class="StringLit">&quot;</span><span class="Punctuation">,</span> <span class="Punctuation">[</span><span class="StringLit">&quot;*.txt&quot;</span><span class="Punctuation">,</span> <span class="StringLit">&quot;*.text&quot;</span><span class="Punctuation">]</span><span class="Punctuation">,</span> <span class="StringLit">&quot;Text file&quot;</span><span class="Punctuation">)</span> <span class="Comment"># &quot;\0&quot; for an emtpy file</span>
 <span class="Identifier">echo</span> <span class="Identifier">openFileDialog</span><span class="Punctuation">(</span><span class="StringLit">&quot;Open the file&quot;</span><span class="Punctuation">,</span> <span class="Identifier">getCurrentDir</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Operator">/</span> <span class="StringLit">&quot;</span><span class="EscapeSequence">\0</span><span class="StringLit">&quot;</span><span class="Punctuation">,</span> <span class="Punctuation">[</span><span class="StringLit">&quot;*.txt&quot;</span><span class="Punctuation">,</span> <span class="StringLit">&quot;*.text&quot;</span><span class="Punctuation">]</span><span class="Punctuation">,</span> <span class="StringLit">&quot;Text file&quot;</span><span class="Punctuation">)</span>
-<span class="Identifier">echo</span> <span class="Identifier">openMultipleFilesDialog</span><span class="Punctuation">(</span><span class="StringLit">&quot;Open the files&quot;</span><span class="Punctuation">,</span> <span class="Identifier">getCurrentDir</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Operator">/</span> <span class="StringLit">&quot;</span><span class="EscapeSequence">\0</span><span class="StringLit">&quot;</span><span class="Punctuation">,</span> <span class="Punctuation">[</span><span class="StringLit">&quot;*.txt&quot;</span><span class="Punctuation">,</span> <span class="StringLit">&quot;*.text&quot;</span><span class="Punctuation">]</span><span class="Punctuation">,</span> <span class="StringLit">&quot;Text files&quot;</span><span class="Punctuation">)</span>
+<span class="Identifier">echo</span> <span class="Identifier">openMultipleFilesDialog</span><span class="Punctuation">(</span><span class="StringLit">&quot;Open the files&quot;</span><span class="Punctuation">,</span> <span class="Identifier">getCurrentDir</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Operator">/</span> <span class="StringLit">&quot;</span><span class="EscapeSequence">\0</span><span class="StringLit">&quot;</span><span class="Punctuation">)</span> <span class="Comment"># No fiilter = Any file</span>
 <span class="Identifier">echo</span> <span class="Identifier">selectFolderDialog</span><span class="Punctuation">(</span><span class="StringLit">&quot;Open the directory of the file&quot;</span><span class="Punctuation">,</span> <span class="Identifier">getCurrentDir</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">)</span>
 <span class="Identifier">echo</span> <span class="Identifier">colorChooser</span><span class="Punctuation">(</span><span class="StringLit">&quot;Choose a color&quot;</span><span class="Punctuation">)</span>
 <span class="Identifier">echo</span> <span class="Identifier">colorChooser</span><span class="Punctuation">(</span><span class="StringLit">&quot;Choose a color&quot;</span><span class="Punctuation">,</span> <span class="StringLit">&quot;#000000&quot;</span><span class="Punctuation">)</span> <span class="Comment"># Hex</span>
@@ -290,13 +294,13 @@
 <div id="openFileDialog-procs-all">
   <div id="openFileDialog,string,string,openArray[string],string">
   <dt><pre><span class="Keyword">proc</span> <a href="#openFileDialog%2Cstring%2Cstring%2CopenArray%5Bstring%5D%2Cstring"><span class="Identifier">openFileDialog</span></a><span class="Other">(</span><span class="Identifier">title</span><span class="Other">,</span> <span class="Identifier">defaultPath</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span>
-                    <span class="Identifier">filterPatterns</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span><span class="Other">;</span>
+                    <span class="Identifier">filterPatterns</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span> <span class="Other">=</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">;</span>
                     <span class="Identifier">singleFilterDescription</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    <p>Returns the selected file (or empty string when cancelled).</p>
-<p>For an empty &quot;file&quot; use a trailing slash <tt class="docutils literal"><span class="pre"><span class="Identifier">dir</span><span class="Operator">/</span></span></tt> in <tt class="docutils literal"><span class="pre"><span class="Identifier">defaultPath</span></span></tt> (or using <tt class="docutils literal"><span class="pre"><span class="Identifier">std</span><span class="Operator">/</span><span class="Identifier">os</span></span></tt> <tt class="docutils literal"><span class="pre"><span class="StringLit">&quot;dir&quot;</span> <span class="Operator">/</span> <span class="StringLit">&quot;</span><span class="EscapeSequence">\0</span><span class="StringLit">&quot;</span></span></tt>).</p>
+    <p>Returns the selected file (or an empty string when cancelled).</p>
+<p>For an empty <tt class="docutils literal"><span class="pre"><span class="Identifier">defaultPath</span></span></tt> use a trailing slash as in <tt class="docutils literal"><span class="pre"><span class="Identifier">dir</span><span class="Operator">/</span></span></tt> (or using <tt class="docutils literal"><span class="pre"><span class="Identifier">std</span><span class="Operator">/</span><span class="Identifier">os</span></span></tt> <tt class="docutils literal"><span class="pre"><span class="StringLit">&quot;dir&quot;</span> <span class="Operator">/</span> <span class="StringLit">&quot;</span><span class="EscapeSequence">\0</span><span class="StringLit">&quot;</span></span></tt>).</p>
 <p>Example of <tt class="docutils literal"><span class="pre"><span class="Identifier">filterPatterns</span></span></tt>: <tt class="docutils literal"><span class="pre"><span class="Punctuation">[</span><span class="StringLit">&quot;*.txt&quot;</span><span class="Punctuation">,</span> <span class="StringLit">&quot;*.text&quot;</span><span class="Punctuation">]</span></span></tt>.</p>
 <p><tt class="docutils literal"><span class="pre"><span class="Identifier">singleFilterDescriptor</span></span></tt> is the text to show instead of <tt class="docutils literal"><span class="pre"><span class="Identifier">filterPatterns</span></span></tt>. <strong>Note:</strong> tinyfiledialogs at the moment only supports one filter.</p>
 
@@ -310,13 +314,13 @@
 <div id="openMultipleFilesDialog-procs-all">
   <div id="openMultipleFilesDialog,string,string,openArray[string],string">
   <dt><pre><span class="Keyword">proc</span> <a href="#openMultipleFilesDialog%2Cstring%2Cstring%2CopenArray%5Bstring%5D%2Cstring"><span class="Identifier">openMultipleFilesDialog</span></a><span class="Other">(</span><span class="Identifier">title</span><span class="Other">,</span> <span class="Identifier">defaultPath</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span>
-                             <span class="Identifier">filterPatterns</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span><span class="Other">;</span>
+                             <span class="Identifier">filterPatterns</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span> <span class="Other">=</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">;</span>
                              <span class="Identifier">singleFilterDescription</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span> {.
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     <p>Returns the selected files (or empty string when cancelled).</p>
-<p>For an empty &quot;file&quot; use a trailing slash <tt class="docutils literal"><span class="pre"><span class="Identifier">dir</span><span class="Operator">/</span></span></tt> in <tt class="docutils literal"><span class="pre"><span class="Identifier">defaultPath</span></span></tt> (or using <tt class="docutils literal"><span class="pre"><span class="Identifier">std</span><span class="Operator">/</span><span class="Identifier">os</span></span></tt> <tt class="docutils literal"><span class="pre"><span class="StringLit">&quot;dir&quot;</span> <span class="Operator">/</span> <span class="StringLit">&quot;</span><span class="EscapeSequence">\0</span><span class="StringLit">&quot;</span></span></tt>).</p>
+<p>For an empty <tt class="docutils literal"><span class="pre"><span class="Identifier">defaultPath</span></span></tt> use a trailing slash as in <tt class="docutils literal"><span class="pre"><span class="Identifier">dir</span><span class="Operator">/</span></span></tt> (or using <tt class="docutils literal"><span class="pre"><span class="Identifier">std</span><span class="Operator">/</span><span class="Identifier">os</span></span></tt> <tt class="docutils literal"><span class="pre"><span class="StringLit">&quot;dir&quot;</span> <span class="Operator">/</span> <span class="StringLit">&quot;</span><span class="EscapeSequence">\0</span><span class="StringLit">&quot;</span></span></tt>).</p>
 <p>Example of <tt class="docutils literal"><span class="pre"><span class="Identifier">filterPatterns</span></span></tt>: <tt class="docutils literal"><span class="pre"><span class="Punctuation">[</span><span class="StringLit">&quot;*.txt&quot;</span><span class="Punctuation">,</span> <span class="StringLit">&quot;*.text&quot;</span><span class="Punctuation">]</span></span></tt>.</p>
 <p><tt class="docutils literal"><span class="pre"><span class="Identifier">singleFilterDescriptor</span></span></tt> is the text to show instead of <tt class="docutils literal"><span class="pre"><span class="Identifier">filterPatterns</span></span></tt>. <strong>Note:</strong> tinyfiledialogs at the moment only supports one filter.</p>
 
@@ -330,13 +334,13 @@
 <div id="saveFileDialog-procs-all">
   <div id="saveFileDialog,string,string,openArray[string],string">
   <dt><pre><span class="Keyword">proc</span> <a href="#saveFileDialog%2Cstring%2Cstring%2CopenArray%5Bstring%5D%2Cstring"><span class="Identifier">saveFileDialog</span></a><span class="Other">(</span><span class="Identifier">title</span><span class="Other">,</span> <span class="Identifier">defaultPath</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span>
-                    <span class="Identifier">filterPatterns</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span><span class="Other">;</span>
+                    <span class="Identifier">filterPatterns</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span> <span class="Other">=</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">;</span>
                     <span class="Identifier">singleFilterDescription</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    <p>Returns the selected file (or empty string when cancelled).</p>
-<p>For an empty &quot;file&quot; use a trailing slash <tt class="docutils literal"><span class="pre"><span class="Identifier">dir</span><span class="Operator">/</span></span></tt> in <tt class="docutils literal"><span class="pre"><span class="Identifier">defaultPath</span></span></tt> (or using <tt class="docutils literal"><span class="pre"><span class="Identifier">std</span><span class="Operator">/</span><span class="Identifier">os</span></span></tt> <tt class="docutils literal"><span class="pre"><span class="StringLit">&quot;dir&quot;</span> <span class="Operator">/</span> <span class="StringLit">&quot;</span><span class="EscapeSequence">\0</span><span class="StringLit">&quot;</span></span></tt>).</p>
+    <p>Returns the selected file (or an empty string when cancelled).</p>
+<p>For an empty <tt class="docutils literal"><span class="pre"><span class="Identifier">defaultPath</span></span></tt> use a trailing slash as in <tt class="docutils literal"><span class="pre"><span class="Identifier">dir</span><span class="Operator">/</span></span></tt> (or using <tt class="docutils literal"><span class="pre"><span class="Identifier">std</span><span class="Operator">/</span><span class="Identifier">os</span></span></tt> <tt class="docutils literal"><span class="pre"><span class="StringLit">&quot;dir&quot;</span> <span class="Operator">/</span> <span class="StringLit">&quot;</span><span class="EscapeSequence">\0</span><span class="StringLit">&quot;</span></span></tt>).</p>
 <p>Example of <tt class="docutils literal"><span class="pre"><span class="Identifier">filterPatterns</span></span></tt>: <tt class="docutils literal"><span class="pre"><span class="Punctuation">[</span><span class="StringLit">&quot;*.txt&quot;</span><span class="Punctuation">,</span> <span class="StringLit">&quot;*.text&quot;</span><span class="Punctuation">]</span></span></tt>.</p>
 <p><tt class="docutils literal"><span class="pre"><span class="Identifier">singleFilterDescriptor</span></span></tt> is the text to show instead of <tt class="docutils literal"><span class="pre"><span class="Identifier">filterPatterns</span></span></tt>. <strong>Note:</strong> tinyfiledialogs at the moment only supports one filter.</p>
 
@@ -377,7 +381,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-10-23 23:02:42 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-11-28 02:46:46 UTC</small>
       </div>
     </div>
   </div>

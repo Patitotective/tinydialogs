@@ -17,9 +17,9 @@ nim	beep	tinydialogs.html#beep	proc beep()		48
 nim	notifyPopup	tinydialogs.html#notifyPopup,string,string,IconType	proc notifyPopup(title, message: string; iconType: IconType)		52
 nim	messageBox	tinydialogs.html#messageBox,string,string,DialogType,IconType,Button	proc messageBox(title, message: string; dialogType: DialogType; iconType: IconType;\n           defaultButton: Button): Button		56
 nim	inputBox	tinydialogs.html#inputBox,string,string,string	proc inputBox(title, message, defaultInput: string): string		60
-nim	saveFileDialog	tinydialogs.html#saveFileDialog,string,string,openArray[string],string	proc saveFileDialog(title, defaultPath: string; filterPatterns: openArray[string];\n               singleFilterDescription = ""): string		66
-nim	openFileDialog	tinydialogs.html#openFileDialog,string,string,openArray[string],string	proc openFileDialog(title, defaultPath: string; filterPatterns: openArray[string];\n               singleFilterDescription = ""): string		86
-nim	openMultipleFilesDialog	tinydialogs.html#openMultipleFilesDialog,string,string,openArray[string],string	proc openMultipleFilesDialog(title, defaultPath: string;\n                        filterPatterns: openArray[string];\n                        singleFilterDescription = ""): seq[string]		107
+nim	saveFileDialog	tinydialogs.html#saveFileDialog,string,string,openArray[string],string	proc saveFileDialog(title, defaultPath: string;\n               filterPatterns: openArray[string] = [];\n               singleFilterDescription = ""): string		66
+nim	openFileDialog	tinydialogs.html#openFileDialog,string,string,openArray[string],string	proc openFileDialog(title, defaultPath: string;\n               filterPatterns: openArray[string] = [];\n               singleFilterDescription = ""): string		86
+nim	openMultipleFilesDialog	tinydialogs.html#openMultipleFilesDialog,string,string,openArray[string],string	proc openMultipleFilesDialog(title, defaultPath: string;\n                        filterPatterns: openArray[string] = [];\n                        singleFilterDescription = ""): seq[string]		107
 nim	selectFolderDialog	tinydialogs.html#selectFolderDialog,string,string	proc selectFolderDialog(title, defaultPath: string): string		130
 nim	colorChooser	tinydialogs.html#colorChooser,string,string	proc colorChooser(title, defaultHexRGB = ""): tuple[hex: string, rgb: array[3, byte]]		135
 nim	colorChooser	tinydialogs.html#colorChooser,string,array[,byte]	proc colorChooser(title: string; defaultRGB: array[3, byte]): tuple[hex: string,\n    rgb: array[3, byte]]		141
