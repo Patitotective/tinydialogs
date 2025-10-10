@@ -164,4 +164,3 @@ when not declared(tinyfd_colorChooser):
 else:
   static:
     hint("Declaration of " & "tinyfd_colorChooser" & " already exists, not redeclaring")
-
