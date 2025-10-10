@@ -1,7 +1,9 @@
 # tinydialogs
+
 High-level [Tiny file dialogs](https://sourceforge.net/projects/tinyfiledialogs) _v3.8.8_ Nim bindings.
 
 ## Example
+
 ```nim
 import std/os
 import tinydialogs
@@ -22,10 +24,12 @@ echo colorChooser("Choose a color", [0u8, 0u8, 0u8]) # RGB
 Read more at the [docs](https://patitotective.github.io/tinydialogs).
 
 ## About
-- GitHub: https://github.com/Patitotective/ImTemplate.
-- Discord: https://discord.gg/U23ZQMsvwc.
+
+- GitHub: <https://github.com/Patitotective/ImTemplate>.
+- Discord: <https://discord.gg/U23ZQMsvwc>.
 
 Contact me:
+
 - Discord: **Patitotective#0127**.
 - Twitter: [@patitotective](https://twitter.com/patitotective).
-- Email: **cristobalriaga@gmail.com**.
+- Email: **<cristobalriaga@gmail.com>**.
