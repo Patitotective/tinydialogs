@@ -29,20 +29,20 @@ when defined(Windows):
 
 type
   IconType* = enum
-    Info = "info",
-    Warning = "warning",
-    Error = "error",
+    Info = "info"
+    Warning = "warning"
+    Error = "error"
     Question = "question" ## Question only works in the message box.
 
   DialogType* = enum
-    Ok = "ok",
-    OkCancel = "okcancel",
-    YesNo = "yesno",
+    Ok = "ok"
+    OkCancel = "okcancel"
+    YesNo = "yesno"
     YesNoCancel = "yesnocancel"
 
   Button* = enum
-    Cancel, ## Cancel/No
-    Yes, ## Ok/Yes
+    Cancel ## Cancel/No
+    Yes ## Ok/Yes
     No ## No in DialogType.YesNoCancel
 
 proc beep*() =
@@ -51,19 +51,41 @@ proc beep*() =
 
 proc notifyPopup*(title, message: string, iconType: IconType) =
   ## `message` may contain `\n\t`.
-  discard tinyfd_notifyPopup(cstring title, cstring message, cstring $iconType)
+  discard tinyfd_notifyPopup(
+    aTitle = cstring title, aMessage = cstring message, aIconType = cstring $iconType
+  )
 
-proc messageBox*(title, message: string, dialogType: DialogType, iconType: IconType, defaultButton: Button): Button =
+proc messageBox*(
+    title, message: string,
+    dialogType: DialogType,
+    iconType: IconType,
+    defaultButton: Button,
+): Button =
   ## `message` may contain `\n\t`.
-  Button tinyfd_messageBox(cstring title, cstring message, cstring $dialogType, cstring $iconType, cint defaultButton)
+  ## Returns the clicked Button.
+  Button tinyfd_messageBox(
+    aTitle = cstring title,
+    aMessage = cstring message,
+    aDialogType = cstring $dialogType,
+    aIconType = cstring $iconType,
+    aDefaultButton = cint defaultButton,
+  )
 
 proc inputBox*(title, message, defaultInput: string): string =
   ## `\n\t` have no effect in `message`.
   ##
   ## Use `""` in `defaultInput` for a password box or something else for an input box. ([#1](https://github.com/Patitotective/tinydialogs/issues/1) related)
-  $tinyfd_inputBox(cstring title, cstring message, cstring defaultInput)
+  $tinyfd_inputBox(
+    aTitle = cstring title,
+    aMessage = cstring message,
+    aDefaultInput = cstring defaultInput,
+  )
 
-proc saveFileDialog*(title, defaultPath: string, filterPatterns: openArray[string] = [], singleFilterDescription = ""): string =
+proc saveFileDialog*(
+    title, defaultPath: string,
+    filterPatterns: openArray[string] = [],
+    singleFilterDescription = "",
+): string =
   ## Returns the selected file (or an empty string when cancelled).
   ##
   ## For an empty `defaultPath` use a trailing slash as in `dir/` (or using `std/os` `"dir" / "\0"`).
@@ -73,17 +95,26 @@ proc saveFileDialog*(title, defaultPath: string, filterPatterns: openArray[strin
   ## `singleFilterDescriptor` is the text to show instead of `filterPatterns`. **Note:** tinyfiledialogs at the moment only supports one filter.
 
   let filterPatterns = collect:
-    for patt in filterPatterns: cstring patt
+    for patt in filterPatterns:
+      cstring patt
 
   $tinyfd_saveFileDialog(
-    cstring title,
-    cstring defaultPath,
-    cint filterPatterns.len,
-    if filterPatterns.len == 0: nil else: cast[ptr ptr cschar](filterPatterns[0].unsafeAddr),
-    cstring singleFilterDescription
+    aTitle = cstring title,
+    aDefaultPathAndFile = cstring defaultPath,
+    aNumOfFilterPatterns = cint filterPatterns.len,
+    aFilterPatterns =
+      if filterPatterns.len == 0:
+        nil
+      else:
+        cast[ptr cstring](filterPatterns[0].unsafeAddr),
+    aSingleFilterDescription = cstring singleFilterDescription,
   )
 
-proc openFileDialog*(title, defaultPath: string, filterPatterns: openArray[string] = [], singleFilterDescription = ""): string =
+proc openFileDialog*(
+    title, defaultPath: string,
+    filterPatterns: openArray[string] = [],
+    singleFilterDescription = "",
+): string =
   ## Returns the selected file (or an empty string when cancelled).
   ##
   ## For an empty `defaultPath` use a trailing slash as in `dir/` (or using `std/os` `"dir" / "\0"`).
@@ -93,18 +124,27 @@ proc openFileDialog*(title, defaultPath: string, filterPatterns: openArray[strin
   ## `singleFilterDescriptor` is the text to show instead of `filterPatterns`. **Note:** tinyfiledialogs at the moment only supports one filter.
 
   let filterPatterns = collect:
-    for patt in filterPatterns: cstring patt
+    for patt in filterPatterns:
+      cstring patt
 
   $tinyfd_openFileDialog(
-    cstring title,
-    cstring defaultPath,
-    cint filterPatterns.len,
-    if filterPatterns.len == 0: nil else: cast[ptr ptr cschar](filterPatterns[0].unsafeAddr),
-    cstring singleFilterDescription,
-    0
+    aTitle = cstring title,
+    aDefaultPathAndFile = cstring defaultPath,
+    aNumOfFilterPatterns = cint filterPatterns.len,
+    aFilterPatterns =
+      if filterPatterns.len == 0:
+        nil
+      else:
+        cast[ptr cstring](filterPatterns[0].unsafeAddr),
+    aSingleFilterDescription = cstring singleFilterDescription,
+    aAllowMultipleSelects = cint 0,
   )
 
-proc openMultipleFilesDialog*(title, defaultPath: string, filterPatterns: openArray[string] = [], singleFilterDescription = ""): seq[string] =
+proc openMultipleFilesDialog*(
+    title, defaultPath: string,
+    filterPatterns: openArray[string] = [],
+    singleFilterDescription = "",
+): seq[string] =
   ## Returns the selected files (or empty string when cancelled).
   ##
   ## For an empty `defaultPath` use a trailing slash as in `dir/` (or using `std/os` `"dir" / "\0"`).
@@ -114,15 +154,20 @@ proc openMultipleFilesDialog*(title, defaultPath: string, filterPatterns: openAr
   ## `singleFilterDescriptor` is the text to show instead of `filterPatterns`. **Note:** tinyfiledialogs at the moment only supports one filter.
 
   let filterPatterns = collect:
-    for patt in filterPatterns: cstring patt
+    for patt in filterPatterns:
+      cstring patt
 
   let paths = tinyfd_openFileDialog(
-    cstring title,
-    cstring defaultPath,
-    cint filterPatterns.len,
-    if filterPatterns.len == 0: nil else: cast[ptr ptr cschar](filterPatterns[0].unsafeAddr),
-    cstring singleFilterDescription,
-    1
+    aTitle = cstring title,
+    aDefaultPathAndFile = cstring defaultPath,
+    aNumOfFilterPatterns = cint filterPatterns.len,
+    aFilterPatterns =
+      if filterPatterns.len == 0:
+        nil
+      else:
+        cast[ptr cstring](filterPatterns[0].unsafeAddr),
+    aSingleFilterDescription = cstring singleFilterDescription,
+    aAllowMultipleSelects = cint 1,
   )
   if paths.len > 0:
     result = split($paths, '|')
@@ -132,14 +177,30 @@ proc selectFolderDialog*(title, defaultPath: string): string =
 
   $tinyfd_selectFolderDialog(cstring title, cstring defaultPath)
 
-proc colorChooser*(title, defaultHexRGB = ""): tuple[hex: string, rgb: array[3, byte]] =
+proc colorChooser*(
+    title = "", defaultHexRGB = ""
+): tuple[hex: string, rgb: array[3, byte]] =
   ## Returns `("", [0u8, 0u8, 0u8])` when no color is selected.
-  var rgb: array[3, cuchar]
-  result.hex = $tinyfd_colorChooser(cstring title, cstring defaultHexRGB, rgb, rgb)
+  var rgb: array[3, byte]
+  result.hex =
+    $tinyfd_colorChooser(
+      aTitle = cstring title,
+      aDefaultHexRGB = cstring defaultHexRGB,
+      aDefaultRGB = rgb,
+      aoResultRGB = rgb,
+    )
   result.rgb = cast[array[3, byte]](rgb)
 
-proc colorChooser*(title: string, defaultRGB: array[3, byte]): tuple[hex: string, rgb: array[3, byte]] =
+proc colorChooser*(
+    title: string, defaultRGB: array[3, byte]
+): tuple[hex: string, rgb: array[3, byte]] =
   ## Returns `("", [0u8, 0u8, 0u8])` when no color is selected.
-  var rgb: array[3, cuchar]
-  result.hex = $tinyfd_colorChooser(title, nil, cast[array[3, cuchar]](defaultRGB), rgb)
+  var rgb: array[3, byte]
+  result.hex =
+    $tinyfd_colorChooser(
+      aTitle = title,
+      aDefaultHexRGB = nil,
+      aDefaultRGB = cast[array[3, byte]](defaultRGB),
+      aoResultRGB = rgb,
+    )
   result.rgb = cast[array[3, byte]](rgb)
