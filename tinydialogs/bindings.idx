@@ -1,20 +1,20 @@
 nimTitle	bindings	tinydialogs/bindings.html	module src/tinydialogs/bindings		0
-nim	tinyfdverbose	tinydialogs/bindings.html#tinyfdverbose	var tinyfdverbose		5
-nim	tinyfdassumegraphicdisplay	tinydialogs/bindings.html#tinyfdassumegraphicdisplay	var tinyfdassumegraphicdisplay		11
-nim	tinyfdcolorchooser	tinydialogs/bindings.html#tinyfdcolorchooser,cstring,cstring,array[,cuchar],array[,cuchar]	proc tinyfdcolorchooser(atitle: cstring; adefaulthexrgb: cstring;\n                   adefaultrgb: array[3'i64, cuchar];\n                   aoresultrgb: array[3'i64, cuchar]): cstring		17
-nim	tinyfdresponse	tinydialogs/bindings.html#tinyfdresponse	var tinyfdresponse		26
-nim	tinyfdsavefiledialog	tinydialogs/bindings.html#tinyfdsavefiledialog,cstring,cstring,cint,ptr.ptr.cschar,cstring	proc tinyfdsavefiledialog(atitle: cstring; adefaultpathandfile: cstring;\n                     anumoffilterpatterns: cint;\n                     afilterpatterns: ptr ptr cschar;\n                     asinglefilterdescription: cstring): cstring		32
-nim	tinyfdsilent	tinydialogs/bindings.html#tinyfdsilent	var tinyfdsilent		42
-nim	tinyfdselectfolderdialog	tinydialogs/bindings.html#tinyfdselectfolderdialog,cstring,cstring	proc tinyfdselectfolderdialog(atitle: cstring; adefaultpath: cstring): cstring		48
-nim	tinyfdgetglobalint	tinydialogs/bindings.html#tinyfdgetglobalint,cstring	proc tinyfdgetglobalint(aintvariablename: cstring): cint		55
-nim	tinyfdbeep	tinydialogs/bindings.html#tinyfdbeep	proc tinyfdbeep(): void		62
-nim	tinyfdneeds	tinydialogs/bindings.html#tinyfdneeds	var tinyfdneeds		67
-nim	tinyfdinputbox	tinydialogs/bindings.html#tinyfdinputbox,cstring,cstring,cstring	proc tinyfdinputbox(atitle: cstring; amessage: cstring; adefaultinput: cstring): cstring		72
-nim	tinyfdallowcursesdialogs	tinydialogs/bindings.html#tinyfdallowcursesdialogs	var tinyfdallowcursesdialogs		80
-nim	tinyfdnotifypopup	tinydialogs/bindings.html#tinyfdnotifypopup,cstring,cstring,cstring	proc tinyfdnotifypopup(atitle: cstring; amessage: cstring; aicontype: cstring): cint		86
-nim	tinyfdversion	tinydialogs/bindings.html#tinyfdversion	var tinyfdversion		93
-nim	tinyfdsetglobalint	tinydialogs/bindings.html#tinyfdsetglobalint,cstring,cint	proc tinyfdsetglobalint(aintvariablename: cstring; avalue: cint): cint		99
-nim	tinyfdforceconsole	tinydialogs/bindings.html#tinyfdforceconsole	var tinyfdforceconsole		106
-nim	tinyfdmessagebox	tinydialogs/bindings.html#tinyfdmessagebox,cstring,cstring,cstring,cstring,cint	proc tinyfdmessagebox(atitle: cstring; amessage: cstring; adialogtype: cstring;\n                 aicontype: cstring; adefaultbutton: cint): cint		112
-nim	tinyfdopenfiledialog	tinydialogs/bindings.html#tinyfdopenfiledialog,cstring,cstring,cint,ptr.ptr.cschar,cstring,cint	proc tinyfdopenfiledialog(atitle: cstring; adefaultpathandfile: cstring;\n                     anumoffilterpatterns: cint;\n                     afilterpatterns: ptr ptr cschar;\n                     asinglefilterdescription: cstring;\n                     aallowmultipleselects: cint): cstring		121
-nim	tinyfdgetglobalchar	tinydialogs/bindings.html#tinyfdgetglobalchar,cstring	proc tinyfdgetglobalchar(acharvariablename: cstring): cstring		132
+nim	tinyfd_getGlobalChar	tinydialogs/bindings.html#tinyfd_getGlobalChar,cstring	proc tinyfd_getGlobalChar(aCharVariableName: cstring): cstring		12
+nim	tinyfd_getGlobalInt	tinydialogs/bindings.html#tinyfd_getGlobalInt,cstring	proc tinyfd_getGlobalInt(aIntVariableName: cstring): cint		22
+nim	tinyfd_setGlobalInt	tinydialogs/bindings.html#tinyfd_setGlobalInt,cstring,cint	proc tinyfd_setGlobalInt(aIntVariableName: cstring; aValue: cint): cint		30
+nim	tinyfd_version	tinydialogs/bindings.html#tinyfd_version	var tinyfd_version		38
+nim	tinyfd_needs	tinydialogs/bindings.html#tinyfd_needs	var tinyfd_needs		43
+nim	tinyfd_verbose	tinydialogs/bindings.html#tinyfd_verbose	var tinyfd_verbose		48
+nim	tinyfd_silent	tinydialogs/bindings.html#tinyfd_silent	var tinyfd_silent		53
+nim	tinyfd_allowCursesDialogs	tinydialogs/bindings.html#tinyfd_allowCursesDialogs	var tinyfd_allowCursesDialogs		58
+nim	tinyfd_forceConsole	tinydialogs/bindings.html#tinyfd_forceConsole	var tinyfd_forceConsole		66
+nim	tinyfd_assumeGraphicDisplay	tinydialogs/bindings.html#tinyfd_assumeGraphicDisplay	var tinyfd_assumeGraphicDisplay		71
+nim	tinyfd_response	tinydialogs/bindings.html#tinyfd_response	var tinyfd_response		79
+nim	tinyfd_beep	tinydialogs/bindings.html#tinyfd_beep	proc tinyfd_beep(): void		84
+nim	tinyfd_notifyPopup	tinydialogs/bindings.html#tinyfd_notifyPopup,cstring,cstring,cstring	proc tinyfd_notifyPopup(aTitle: cstring; aMessage: cstring; aIconType: cstring): cint		89
+nim	tinyfd_messageBox	tinydialogs/bindings.html#tinyfd_messageBox,cstring,cstring,cstring,cstring,cint	proc tinyfd_messageBox(aTitle: cstring; aMessage: cstring; aDialogType: cstring;\n                  aIconType: cstring; aDefaultButton: cint): cint		97
+nim	tinyfd_inputBox	tinydialogs/bindings.html#tinyfd_inputBox,cstring,cstring,cstring	proc tinyfd_inputBox(aTitle: cstring; aMessage: cstring; aDefaultInput: cstring): cstring		109
+nim	tinyfd_saveFileDialog	tinydialogs/bindings.html#tinyfd_saveFileDialog,cstring,cstring,cint,ptr.cstring,cstring	proc tinyfd_saveFileDialog(aTitle: cstring; aDefaultPathAndFile: cstring;\n                      aNumOfFilterPatterns: cint; aFilterPatterns: ptr cstring;\n                      aSingleFilterDescription: cstring): cstring		117
+nim	tinyfd_openFileDialog	tinydialogs/bindings.html#tinyfd_openFileDialog,cstring,cstring,cint,ptr.cstring,cstring,cint	proc tinyfd_openFileDialog(aTitle: cstring; aDefaultPathAndFile: cstring;\n                      aNumOfFilterPatterns: cint; aFilterPatterns: ptr cstring;\n                      aSingleFilterDescription: cstring;\n                      aAllowMultipleSelects: cint): cstring		131
+nim	tinyfd_selectFolderDialog	tinydialogs/bindings.html#tinyfd_selectFolderDialog,cstring,cstring	proc tinyfd_selectFolderDialog(aTitle: cstring; aDefaultPath: cstring): cstring		146
+nim	tinyfd_colorChooser	tinydialogs/bindings.html#tinyfd_colorChooser,cstring,cstring,array[,uint8],array[,uint8]	proc tinyfd_colorChooser(aTitle: cstring; aDefaultHexRGB: cstring;\n                    aDefaultRGB: array[3'i64, uint8];\n                    aoResultRGB: array[3'i64, uint8]): cstring		157

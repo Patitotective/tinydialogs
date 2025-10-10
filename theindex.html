@@ -44,7 +44,9 @@
     rgb: array[3, byte]]" href="tinydialogs.html#colorChooser%2Cstring%2Carray%5B%2Cbyte%5D">tinydialogs: proc colorChooser(title: string; defaultRGB: array[3, byte]): tuple[hex: string,
     rgb: array[3, byte]]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="tinydialogs: proc colorChooser(title, defaultHexRGB = &quot;&quot;): tuple[hex: string, rgb: array[3, byte]]" href="tinydialogs.html#colorChooser%2Cstring%2Cstring">tinydialogs: proc colorChooser(title, defaultHexRGB = &quot;&quot;): tuple[hex: string, rgb: array[3, byte]]</a></li>
+          data-doc-search-tag="tinydialogs: proc colorChooser(title = &quot;&quot;; defaultHexRGB = &quot;&quot;): tuple[hex: string,
+    rgb: array[3, byte]]" href="tinydialogs.html#colorChooser%2Cstring%2Cstring">tinydialogs: proc colorChooser(title = &quot;&quot;; defaultHexRGB = &quot;&quot;): tuple[hex: string,
+    rgb: array[3, byte]]</a></li>
           </ul></dd>
 <dt><a name="DialogType" href="#DialogType"><span>DialogType:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -120,101 +122,97 @@
 <li><a class="reference external"
           data-doc-search-tag="tinydialogs: proc selectFolderDialog(title, defaultPath: string): string" href="tinydialogs.html#selectFolderDialog%2Cstring%2Cstring">tinydialogs: proc selectFolderDialog(title, defaultPath: string): string</a></li>
           </ul></dd>
-<dt><a name="tinyfdallowcursesdialogs" href="#tinyfdallowcursesdialogs"><span>tinyfdallowcursesdialogs:</span></a></dt><dd><ul class="simple">
+<dt><a name="tinyfd_allowCursesDialogs" href="#tinyfd_allowCursesDialogs"><span>tinyfd_allowCursesDialogs:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="bindings: var tinyfdallowcursesdialogs" href="tinydialogs/bindings.html#tinyfdallowcursesdialogs">bindings: var tinyfdallowcursesdialogs</a></li>
+          data-doc-search-tag="bindings: var tinyfd_allowCursesDialogs" href="tinydialogs/bindings.html#tinyfd_allowCursesDialogs">bindings: var tinyfd_allowCursesDialogs</a></li>
           </ul></dd>
-<dt><a name="tinyfdassumegraphicdisplay" href="#tinyfdassumegraphicdisplay"><span>tinyfdassumegraphicdisplay:</span></a></dt><dd><ul class="simple">
+<dt><a name="tinyfd_assumeGraphicDisplay" href="#tinyfd_assumeGraphicDisplay"><span>tinyfd_assumeGraphicDisplay:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="bindings: var tinyfdassumegraphicdisplay" href="tinydialogs/bindings.html#tinyfdassumegraphicdisplay">bindings: var tinyfdassumegraphicdisplay</a></li>
+          data-doc-search-tag="bindings: var tinyfd_assumeGraphicDisplay" href="tinydialogs/bindings.html#tinyfd_assumeGraphicDisplay">bindings: var tinyfd_assumeGraphicDisplay</a></li>
           </ul></dd>
-<dt><a name="tinyfdbeep" href="#tinyfdbeep"><span>tinyfdbeep:</span></a></dt><dd><ul class="simple">
+<dt><a name="tinyfd_beep" href="#tinyfd_beep"><span>tinyfd_beep:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="bindings: proc tinyfdbeep(): void" href="tinydialogs/bindings.html#tinyfdbeep">bindings: proc tinyfdbeep(): void</a></li>
+          data-doc-search-tag="bindings: proc tinyfd_beep(): void" href="tinydialogs/bindings.html#tinyfd_beep">bindings: proc tinyfd_beep(): void</a></li>
           </ul></dd>
-<dt><a name="tinyfdcolorchooser" href="#tinyfdcolorchooser"><span>tinyfdcolorchooser:</span></a></dt><dd><ul class="simple">
+<dt><a name="tinyfd_colorChooser" href="#tinyfd_colorChooser"><span>tinyfd_colorChooser:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="bindings: proc tinyfdcolorchooser(atitle: cstring; adefaulthexrgb: cstring;
-                   adefaultrgb: array[3'i64, cuchar];
-                   aoresultrgb: array[3'i64, cuchar]): cstring" href="tinydialogs/bindings.html#tinyfdcolorchooser%2Ccstring%2Ccstring%2Carray%5B%2Ccuchar%5D%2Carray%5B%2Ccuchar%5D">bindings: proc tinyfdcolorchooser(atitle: cstring; adefaulthexrgb: cstring;
-                   adefaultrgb: array[3'i64, cuchar];
-                   aoresultrgb: array[3'i64, cuchar]): cstring</a></li>
+          data-doc-search-tag="bindings: proc tinyfd_colorChooser(aTitle: cstring; aDefaultHexRGB: cstring;
+                    aDefaultRGB: array[3'i64, uint8];
+                    aoResultRGB: array[3'i64, uint8]): cstring" href="tinydialogs/bindings.html#tinyfd_colorChooser%2Ccstring%2Ccstring%2Carray%5B%2Cuint8%5D%2Carray%5B%2Cuint8%5D">bindings: proc tinyfd_colorChooser(aTitle: cstring; aDefaultHexRGB: cstring;
+                    aDefaultRGB: array[3'i64, uint8];
+                    aoResultRGB: array[3'i64, uint8]): cstring</a></li>
           </ul></dd>
-<dt><a name="tinyfdforceconsole" href="#tinyfdforceconsole"><span>tinyfdforceconsole:</span></a></dt><dd><ul class="simple">
+<dt><a name="tinyfd_forceConsole" href="#tinyfd_forceConsole"><span>tinyfd_forceConsole:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="bindings: var tinyfdforceconsole" href="tinydialogs/bindings.html#tinyfdforceconsole">bindings: var tinyfdforceconsole</a></li>
+          data-doc-search-tag="bindings: var tinyfd_forceConsole" href="tinydialogs/bindings.html#tinyfd_forceConsole">bindings: var tinyfd_forceConsole</a></li>
           </ul></dd>
-<dt><a name="tinyfdgetglobalchar" href="#tinyfdgetglobalchar"><span>tinyfdgetglobalchar:</span></a></dt><dd><ul class="simple">
+<dt><a name="tinyfd_getGlobalChar" href="#tinyfd_getGlobalChar"><span>tinyfd_getGlobalChar:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="bindings: proc tinyfdgetglobalchar(acharvariablename: cstring): cstring" href="tinydialogs/bindings.html#tinyfdgetglobalchar%2Ccstring">bindings: proc tinyfdgetglobalchar(acharvariablename: cstring): cstring</a></li>
+          data-doc-search-tag="bindings: proc tinyfd_getGlobalChar(aCharVariableName: cstring): cstring" href="tinydialogs/bindings.html#tinyfd_getGlobalChar%2Ccstring">bindings: proc tinyfd_getGlobalChar(aCharVariableName: cstring): cstring</a></li>
           </ul></dd>
-<dt><a name="tinyfdgetglobalint" href="#tinyfdgetglobalint"><span>tinyfdgetglobalint:</span></a></dt><dd><ul class="simple">
+<dt><a name="tinyfd_getGlobalInt" href="#tinyfd_getGlobalInt"><span>tinyfd_getGlobalInt:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="bindings: proc tinyfdgetglobalint(aintvariablename: cstring): cint" href="tinydialogs/bindings.html#tinyfdgetglobalint%2Ccstring">bindings: proc tinyfdgetglobalint(aintvariablename: cstring): cint</a></li>
+          data-doc-search-tag="bindings: proc tinyfd_getGlobalInt(aIntVariableName: cstring): cint" href="tinydialogs/bindings.html#tinyfd_getGlobalInt%2Ccstring">bindings: proc tinyfd_getGlobalInt(aIntVariableName: cstring): cint</a></li>
           </ul></dd>
-<dt><a name="tinyfdinputbox" href="#tinyfdinputbox"><span>tinyfdinputbox:</span></a></dt><dd><ul class="simple">
+<dt><a name="tinyfd_inputBox" href="#tinyfd_inputBox"><span>tinyfd_inputBox:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="bindings: proc tinyfdinputbox(atitle: cstring; amessage: cstring; adefaultinput: cstring): cstring" href="tinydialogs/bindings.html#tinyfdinputbox%2Ccstring%2Ccstring%2Ccstring">bindings: proc tinyfdinputbox(atitle: cstring; amessage: cstring; adefaultinput: cstring): cstring</a></li>
+          data-doc-search-tag="bindings: proc tinyfd_inputBox(aTitle: cstring; aMessage: cstring; aDefaultInput: cstring): cstring" href="tinydialogs/bindings.html#tinyfd_inputBox%2Ccstring%2Ccstring%2Ccstring">bindings: proc tinyfd_inputBox(aTitle: cstring; aMessage: cstring; aDefaultInput: cstring): cstring</a></li>
           </ul></dd>
-<dt><a name="tinyfdmessagebox" href="#tinyfdmessagebox"><span>tinyfdmessagebox:</span></a></dt><dd><ul class="simple">
+<dt><a name="tinyfd_messageBox" href="#tinyfd_messageBox"><span>tinyfd_messageBox:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="bindings: proc tinyfdmessagebox(atitle: cstring; amessage: cstring; adialogtype: cstring;
-                 aicontype: cstring; adefaultbutton: cint): cint" href="tinydialogs/bindings.html#tinyfdmessagebox%2Ccstring%2Ccstring%2Ccstring%2Ccstring%2Ccint">bindings: proc tinyfdmessagebox(atitle: cstring; amessage: cstring; adialogtype: cstring;
-                 aicontype: cstring; adefaultbutton: cint): cint</a></li>
+          data-doc-search-tag="bindings: proc tinyfd_messageBox(aTitle: cstring; aMessage: cstring; aDialogType: cstring;
+                  aIconType: cstring; aDefaultButton: cint): cint" href="tinydialogs/bindings.html#tinyfd_messageBox%2Ccstring%2Ccstring%2Ccstring%2Ccstring%2Ccint">bindings: proc tinyfd_messageBox(aTitle: cstring; aMessage: cstring; aDialogType: cstring;
+                  aIconType: cstring; aDefaultButton: cint): cint</a></li>
           </ul></dd>
-<dt><a name="tinyfdneeds" href="#tinyfdneeds"><span>tinyfdneeds:</span></a></dt><dd><ul class="simple">
+<dt><a name="tinyfd_needs" href="#tinyfd_needs"><span>tinyfd_needs:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="bindings: var tinyfdneeds" href="tinydialogs/bindings.html#tinyfdneeds">bindings: var tinyfdneeds</a></li>
+          data-doc-search-tag="bindings: var tinyfd_needs" href="tinydialogs/bindings.html#tinyfd_needs">bindings: var tinyfd_needs</a></li>
           </ul></dd>
-<dt><a name="tinyfdnotifypopup" href="#tinyfdnotifypopup"><span>tinyfdnotifypopup:</span></a></dt><dd><ul class="simple">
+<dt><a name="tinyfd_notifyPopup" href="#tinyfd_notifyPopup"><span>tinyfd_notifyPopup:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="bindings: proc tinyfdnotifypopup(atitle: cstring; amessage: cstring; aicontype: cstring): cint" href="tinydialogs/bindings.html#tinyfdnotifypopup%2Ccstring%2Ccstring%2Ccstring">bindings: proc tinyfdnotifypopup(atitle: cstring; amessage: cstring; aicontype: cstring): cint</a></li>
+          data-doc-search-tag="bindings: proc tinyfd_notifyPopup(aTitle: cstring; aMessage: cstring; aIconType: cstring): cint" href="tinydialogs/bindings.html#tinyfd_notifyPopup%2Ccstring%2Ccstring%2Ccstring">bindings: proc tinyfd_notifyPopup(aTitle: cstring; aMessage: cstring; aIconType: cstring): cint</a></li>
           </ul></dd>
-<dt><a name="tinyfdopenfiledialog" href="#tinyfdopenfiledialog"><span>tinyfdopenfiledialog:</span></a></dt><dd><ul class="simple">
+<dt><a name="tinyfd_openFileDialog" href="#tinyfd_openFileDialog"><span>tinyfd_openFileDialog:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="bindings: proc tinyfdopenfiledialog(atitle: cstring; adefaultpathandfile: cstring;
-                     anumoffilterpatterns: cint;
-                     afilterpatterns: ptr ptr cschar;
-                     asinglefilterdescription: cstring;
-                     aallowmultipleselects: cint): cstring" href="tinydialogs/bindings.html#tinyfdopenfiledialog%2Ccstring%2Ccstring%2Ccint%2Cptr.ptr.cschar%2Ccstring%2Ccint">bindings: proc tinyfdopenfiledialog(atitle: cstring; adefaultpathandfile: cstring;
-                     anumoffilterpatterns: cint;
-                     afilterpatterns: ptr ptr cschar;
-                     asinglefilterdescription: cstring;
-                     aallowmultipleselects: cint): cstring</a></li>
+          data-doc-search-tag="bindings: proc tinyfd_openFileDialog(aTitle: cstring; aDefaultPathAndFile: cstring;
+                      aNumOfFilterPatterns: cint; aFilterPatterns: ptr cstring;
+                      aSingleFilterDescription: cstring;
+                      aAllowMultipleSelects: cint): cstring" href="tinydialogs/bindings.html#tinyfd_openFileDialog%2Ccstring%2Ccstring%2Ccint%2Cptr.cstring%2Ccstring%2Ccint">bindings: proc tinyfd_openFileDialog(aTitle: cstring; aDefaultPathAndFile: cstring;
+                      aNumOfFilterPatterns: cint; aFilterPatterns: ptr cstring;
+                      aSingleFilterDescription: cstring;
+                      aAllowMultipleSelects: cint): cstring</a></li>
           </ul></dd>
-<dt><a name="tinyfdresponse" href="#tinyfdresponse"><span>tinyfdresponse:</span></a></dt><dd><ul class="simple">
+<dt><a name="tinyfd_response" href="#tinyfd_response"><span>tinyfd_response:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="bindings: var tinyfdresponse" href="tinydialogs/bindings.html#tinyfdresponse">bindings: var tinyfdresponse</a></li>
+          data-doc-search-tag="bindings: var tinyfd_response" href="tinydialogs/bindings.html#tinyfd_response">bindings: var tinyfd_response</a></li>
           </ul></dd>
-<dt><a name="tinyfdsavefiledialog" href="#tinyfdsavefiledialog"><span>tinyfdsavefiledialog:</span></a></dt><dd><ul class="simple">
+<dt><a name="tinyfd_saveFileDialog" href="#tinyfd_saveFileDialog"><span>tinyfd_saveFileDialog:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="bindings: proc tinyfdsavefiledialog(atitle: cstring; adefaultpathandfile: cstring;
-                     anumoffilterpatterns: cint;
-                     afilterpatterns: ptr ptr cschar;
-                     asinglefilterdescription: cstring): cstring" href="tinydialogs/bindings.html#tinyfdsavefiledialog%2Ccstring%2Ccstring%2Ccint%2Cptr.ptr.cschar%2Ccstring">bindings: proc tinyfdsavefiledialog(atitle: cstring; adefaultpathandfile: cstring;
-                     anumoffilterpatterns: cint;
-                     afilterpatterns: ptr ptr cschar;
-                     asinglefilterdescription: cstring): cstring</a></li>
+          data-doc-search-tag="bindings: proc tinyfd_saveFileDialog(aTitle: cstring; aDefaultPathAndFile: cstring;
+                      aNumOfFilterPatterns: cint; aFilterPatterns: ptr cstring;
+                      aSingleFilterDescription: cstring): cstring" href="tinydialogs/bindings.html#tinyfd_saveFileDialog%2Ccstring%2Ccstring%2Ccint%2Cptr.cstring%2Ccstring">bindings: proc tinyfd_saveFileDialog(aTitle: cstring; aDefaultPathAndFile: cstring;
+                      aNumOfFilterPatterns: cint; aFilterPatterns: ptr cstring;
+                      aSingleFilterDescription: cstring): cstring</a></li>
           </ul></dd>
-<dt><a name="tinyfdselectfolderdialog" href="#tinyfdselectfolderdialog"><span>tinyfdselectfolderdialog:</span></a></dt><dd><ul class="simple">
+<dt><a name="tinyfd_selectFolderDialog" href="#tinyfd_selectFolderDialog"><span>tinyfd_selectFolderDialog:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="bindings: proc tinyfdselectfolderdialog(atitle: cstring; adefaultpath: cstring): cstring" href="tinydialogs/bindings.html#tinyfdselectfolderdialog%2Ccstring%2Ccstring">bindings: proc tinyfdselectfolderdialog(atitle: cstring; adefaultpath: cstring): cstring</a></li>
+          data-doc-search-tag="bindings: proc tinyfd_selectFolderDialog(aTitle: cstring; aDefaultPath: cstring): cstring" href="tinydialogs/bindings.html#tinyfd_selectFolderDialog%2Ccstring%2Ccstring">bindings: proc tinyfd_selectFolderDialog(aTitle: cstring; aDefaultPath: cstring): cstring</a></li>
           </ul></dd>
-<dt><a name="tinyfdsetglobalint" href="#tinyfdsetglobalint"><span>tinyfdsetglobalint:</span></a></dt><dd><ul class="simple">
+<dt><a name="tinyfd_setGlobalInt" href="#tinyfd_setGlobalInt"><span>tinyfd_setGlobalInt:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="bindings: proc tinyfdsetglobalint(aintvariablename: cstring; avalue: cint): cint" href="tinydialogs/bindings.html#tinyfdsetglobalint%2Ccstring%2Ccint">bindings: proc tinyfdsetglobalint(aintvariablename: cstring; avalue: cint): cint</a></li>
+          data-doc-search-tag="bindings: proc tinyfd_setGlobalInt(aIntVariableName: cstring; aValue: cint): cint" href="tinydialogs/bindings.html#tinyfd_setGlobalInt%2Ccstring%2Ccint">bindings: proc tinyfd_setGlobalInt(aIntVariableName: cstring; aValue: cint): cint</a></li>
           </ul></dd>
-<dt><a name="tinyfdsilent" href="#tinyfdsilent"><span>tinyfdsilent:</span></a></dt><dd><ul class="simple">
+<dt><a name="tinyfd_silent" href="#tinyfd_silent"><span>tinyfd_silent:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="bindings: var tinyfdsilent" href="tinydialogs/bindings.html#tinyfdsilent">bindings: var tinyfdsilent</a></li>
+          data-doc-search-tag="bindings: var tinyfd_silent" href="tinydialogs/bindings.html#tinyfd_silent">bindings: var tinyfd_silent</a></li>
           </ul></dd>
-<dt><a name="tinyfdverbose" href="#tinyfdverbose"><span>tinyfdverbose:</span></a></dt><dd><ul class="simple">
+<dt><a name="tinyfd_verbose" href="#tinyfd_verbose"><span>tinyfd_verbose:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="bindings: var tinyfdverbose" href="tinydialogs/bindings.html#tinyfdverbose">bindings: var tinyfdverbose</a></li>
+          data-doc-search-tag="bindings: var tinyfd_verbose" href="tinydialogs/bindings.html#tinyfd_verbose">bindings: var tinyfd_verbose</a></li>
           </ul></dd>
-<dt><a name="tinyfdversion" href="#tinyfdversion"><span>tinyfdversion:</span></a></dt><dd><ul class="simple">
+<dt><a name="tinyfd_version" href="#tinyfd_version"><span>tinyfd_version:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="bindings: var tinyfdversion" href="tinydialogs/bindings.html#tinyfdversion">bindings: var tinyfdversion</a></li>
+          data-doc-search-tag="bindings: var tinyfd_version" href="tinydialogs/bindings.html#tinyfd_version">bindings: var tinyfd_version</a></li>
           </ul></dd>
 <dt><a name="Warning" href="#Warning"><span>Warning:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -236,7 +234,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2025-10-10 12:37:34 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2025-10-10 15:00:10 UTC</small>
       </div>
     </div>
   </div>

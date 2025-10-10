@@ -80,7 +80,9 @@
 
 </ul>
 <ul class="simple nested-toc-section">colorChooser
-  <li><a class="reference" href="#colorChooser%2Cstring%2Cstring" title="colorChooser(title, defaultHexRGB = &quot;&quot;): tuple[hex: string, rgb: array[3, byte]]">colorChooser(title, defaultHexRGB = &quot;&quot;): tuple[hex: string, rgb: array[3, byte]]</a></li>
+  <li><a class="reference" href="#colorChooser%2Cstring%2Cstring" title="colorChooser(title = &quot;&quot;; defaultHexRGB = &quot;&quot;): tuple[hex: string,
+    rgb: array[3, byte]]">colorChooser(title = &quot;&quot;; defaultHexRGB = &quot;&quot;): tuple[hex: string,
+    rgb: array[3, byte]]</a></li>
 <li><a class="reference" href="#colorChooser%2Cstring%2Carray%5B%2Cbyte%5D" title="colorChooser(title: string; defaultRGB: array[3, byte]): tuple[hex: string,
     rgb: array[3, byte]]">colorChooser(title: string; defaultRGB: array[3, byte]): tuple[hex: string,
     rgb: array[3, byte]]</a></li>
@@ -226,13 +228,13 @@
 </div>
 <div id="colorChooser-procs-all">
   <div id="colorChooser,string,string">
-  <dt><pre><span class="Keyword">proc</span> <a href="#colorChooser%2Cstring%2Cstring"><span class="Identifier">colorChooser</span></a><span class="Other">(</span><span class="Identifier">title</span><span class="Other">,</span> <span class="Identifier">defaultHexRGB</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">hex</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#colorChooser%2Cstring%2Cstring"><span class="Identifier">colorChooser</span></a><span class="Other">(</span><span class="Identifier">title</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">;</span> <span class="Identifier">defaultHexRGB</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">hex</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">,</span>
     <span class="Identifier">rgb</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="DecNumber">3</span><span class="Other">,</span> <span class="Identifier">byte</span><span class="Other">]</span><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Returns <tt class="docutils literal"><span class="pre"><span class="Punctuation">(</span><span class="StringLit">&quot;&quot;</span><span class="Punctuation">,</span> <span class="Punctuation">[</span><span class="DecNumber">0</span><span class="Identifier">u8</span><span class="Punctuation">,</span> <span class="DecNumber">0</span><span class="Identifier">u8</span><span class="Punctuation">,</span> <span class="DecNumber">0</span><span class="Identifier">u8</span><span class="Punctuation">]</span><span class="Punctuation">)</span></span></tt> when no color is selected.
-    <a href="https://github.com/Patitotective/tinydialogs/tree/main/src/tinydialogs.nim#L135" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/Patitotective/tinydialogs/edit/devel/src/tinydialogs.nim#L135" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/Patitotective/tinydialogs/tree/main/src/tinydialogs.nim#L180" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/Patitotective/tinydialogs/edit/devel/src/tinydialogs.nim#L180" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -242,8 +244,8 @@
   <dd>
     
     Returns <tt class="docutils literal"><span class="pre"><span class="Punctuation">(</span><span class="StringLit">&quot;&quot;</span><span class="Punctuation">,</span> <span class="Punctuation">[</span><span class="DecNumber">0</span><span class="Identifier">u8</span><span class="Punctuation">,</span> <span class="DecNumber">0</span><span class="Identifier">u8</span><span class="Punctuation">,</span> <span class="DecNumber">0</span><span class="Identifier">u8</span><span class="Punctuation">]</span><span class="Punctuation">)</span></span></tt> when no color is selected.
-    <a href="https://github.com/Patitotective/tinydialogs/tree/main/src/tinydialogs.nim#L141" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/Patitotective/tinydialogs/edit/devel/src/tinydialogs.nim#L141" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/Patitotective/tinydialogs/tree/main/src/tinydialogs.nim#L194" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/Patitotective/tinydialogs/edit/devel/src/tinydialogs.nim#L194" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -258,8 +260,8 @@
     <p><tt class="docutils literal"><span class="pre"><span class="Operator">\</span><span class="Identifier">n</span><span class="Operator">\</span><span class="Identifier">t</span></span></tt> have no effect in <tt class="docutils literal"><span class="pre"><span class="Identifier">message</span></span></tt>.</p>
 <p>Use <tt class="docutils literal"><span class="pre"><span class="StringLit">&quot;&quot;</span></span></tt> in <tt class="docutils literal"><span class="pre"><span class="Identifier">defaultInput</span></span></tt> for a password box or something else for an input box. (<a class="reference external" href="https://github.com/Patitotective/tinydialogs/issues/1">#1</a> related)</p>
 
-    <a href="https://github.com/Patitotective/tinydialogs/tree/main/src/tinydialogs.nim#L60" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/Patitotective/tinydialogs/edit/devel/src/tinydialogs.nim#L60" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/Patitotective/tinydialogs/tree/main/src/tinydialogs.nim#L74" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/Patitotective/tinydialogs/edit/devel/src/tinydialogs.nim#L74" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -272,9 +274,9 @@
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    <tt class="docutils literal"><span class="pre"><span class="Identifier">message</span></span></tt> may contain <tt class="docutils literal"><span class="pre"><span class="Operator">\</span><span class="Identifier">n</span><span class="Operator">\</span><span class="Identifier">t</span></span></tt>.
-    <a href="https://github.com/Patitotective/tinydialogs/tree/main/src/tinydialogs.nim#L56" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/Patitotective/tinydialogs/edit/devel/src/tinydialogs.nim#L56" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <tt class="docutils literal"><span class="pre"><span class="Identifier">message</span></span></tt> may contain <tt class="docutils literal"><span class="pre"><span class="Operator">\</span><span class="Identifier">n</span><span class="Operator">\</span><span class="Identifier">t</span></span></tt>. Returns the clicked Button.
+    <a href="https://github.com/Patitotective/tinydialogs/tree/main/src/tinydialogs.nim#L58" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/Patitotective/tinydialogs/edit/devel/src/tinydialogs.nim#L58" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -307,8 +309,8 @@
 <p>Example of <tt class="docutils literal"><span class="pre"><span class="Identifier">filterPatterns</span></span></tt>: <tt class="docutils literal"><span class="pre"><span class="Punctuation">[</span><span class="StringLit">&quot;*.txt&quot;</span><span class="Punctuation">,</span> <span class="StringLit">&quot;*.text&quot;</span><span class="Punctuation">]</span></span></tt>.</p>
 <p><tt class="docutils literal"><span class="pre"><span class="Identifier">singleFilterDescriptor</span></span></tt> is the text to show instead of <tt class="docutils literal"><span class="pre"><span class="Identifier">filterPatterns</span></span></tt>. <strong>Note:</strong> tinyfiledialogs at the moment only supports one filter.</p>
 
-    <a href="https://github.com/Patitotective/tinydialogs/tree/main/src/tinydialogs.nim#L86" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/Patitotective/tinydialogs/edit/devel/src/tinydialogs.nim#L86" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/Patitotective/tinydialogs/tree/main/src/tinydialogs.nim#L113" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/Patitotective/tinydialogs/edit/devel/src/tinydialogs.nim#L113" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -327,8 +329,8 @@
 <p>Example of <tt class="docutils literal"><span class="pre"><span class="Identifier">filterPatterns</span></span></tt>: <tt class="docutils literal"><span class="pre"><span class="Punctuation">[</span><span class="StringLit">&quot;*.txt&quot;</span><span class="Punctuation">,</span> <span class="StringLit">&quot;*.text&quot;</span><span class="Punctuation">]</span></span></tt>.</p>
 <p><tt class="docutils literal"><span class="pre"><span class="Identifier">singleFilterDescriptor</span></span></tt> is the text to show instead of <tt class="docutils literal"><span class="pre"><span class="Identifier">filterPatterns</span></span></tt>. <strong>Note:</strong> tinyfiledialogs at the moment only supports one filter.</p>
 
-    <a href="https://github.com/Patitotective/tinydialogs/tree/main/src/tinydialogs.nim#L107" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/Patitotective/tinydialogs/edit/devel/src/tinydialogs.nim#L107" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/Patitotective/tinydialogs/tree/main/src/tinydialogs.nim#L143" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/Patitotective/tinydialogs/edit/devel/src/tinydialogs.nim#L143" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -347,8 +349,8 @@
 <p>Example of <tt class="docutils literal"><span class="pre"><span class="Identifier">filterPatterns</span></span></tt>: <tt class="docutils literal"><span class="pre"><span class="Punctuation">[</span><span class="StringLit">&quot;*.txt&quot;</span><span class="Punctuation">,</span> <span class="StringLit">&quot;*.text&quot;</span><span class="Punctuation">]</span></span></tt>.</p>
 <p><tt class="docutils literal"><span class="pre"><span class="Identifier">singleFilterDescriptor</span></span></tt> is the text to show instead of <tt class="docutils literal"><span class="pre"><span class="Identifier">filterPatterns</span></span></tt>. <strong>Note:</strong> tinyfiledialogs at the moment only supports one filter.</p>
 
-    <a href="https://github.com/Patitotective/tinydialogs/tree/main/src/tinydialogs.nim#L66" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/Patitotective/tinydialogs/edit/devel/src/tinydialogs.nim#L66" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/Patitotective/tinydialogs/tree/main/src/tinydialogs.nim#L84" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/Patitotective/tinydialogs/edit/devel/src/tinydialogs.nim#L84" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -361,8 +363,8 @@
   <dd>
     
     Returns the selected folder (or empty when cancelled).
-    <a href="https://github.com/Patitotective/tinydialogs/tree/main/src/tinydialogs.nim#L130" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/Patitotective/tinydialogs/edit/devel/src/tinydialogs.nim#L130" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/Patitotective/tinydialogs/tree/main/src/tinydialogs.nim#L175" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/Patitotective/tinydialogs/edit/devel/src/tinydialogs.nim#L175" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -374,7 +376,7 @@
 <div class="section" id="19">
   <h1><a class="toc-backref" href="#19">Exports</a></h1>
   <dl class="item">
-    <a href="tinydialogs/bindings.html#tinyfdcolorchooser,cstring,cstring,array[,cuchar],array[,cuchar]"><span class="Identifier">tinyfdcolorchooser</span></a>, <a href="tinydialogs/bindings.html#tinyfdneeds"><span class="Identifier">tinyfdneeds</span></a>, <a href="tinydialogs/bindings.html#tinyfdverbose"><span class="Identifier">tinyfdverbose</span></a>, <a href="tinydialogs/bindings.html#tinyfdselectfolderdialog,cstring,cstring"><span class="Identifier">tinyfdselectfolderdialog</span></a>, <a href="tinydialogs/bindings.html#tinyfdsetglobalint,cstring,cint"><span class="Identifier">tinyfdsetglobalint</span></a>, <a href="tinydialogs/bindings.html#tinyfdgetglobalchar,cstring"><span class="Identifier">tinyfdgetglobalchar</span></a>, <a href="tinydialogs/bindings.html#tinyfdgetglobalint,cstring"><span class="Identifier">tinyfdgetglobalint</span></a>, <a href="tinydialogs/bindings.html#tinyfdbeep"><span class="Identifier">tinyfdbeep</span></a>, <a href="tinydialogs/bindings.html#tinyfdforceconsole"><span class="Identifier">tinyfdforceconsole</span></a>, <a href="tinydialogs/bindings.html#tinyfdassumegraphicdisplay"><span class="Identifier">tinyfdassumegraphicdisplay</span></a>, <a href="tinydialogs/bindings.html#tinyfdallowcursesdialogs"><span class="Identifier">tinyfdallowcursesdialogs</span></a>, <a href="tinydialogs/bindings.html#tinyfdsavefiledialog,cstring,cstring,cint,ptr.ptr.cschar,cstring"><span class="Identifier">tinyfdsavefiledialog</span></a>, <a href="tinydialogs/bindings.html#tinyfdresponse"><span class="Identifier">tinyfdresponse</span></a>, <a href="tinydialogs/bindings.html#tinyfdversion"><span class="Identifier">tinyfdversion</span></a>, <a href="tinydialogs/bindings.html#tinyfdmessagebox,cstring,cstring,cstring,cstring,cint"><span class="Identifier">tinyfdmessagebox</span></a>, <a href="tinydialogs/bindings.html#tinyfdopenfiledialog,cstring,cstring,cint,ptr.ptr.cschar,cstring,cint"><span class="Identifier">tinyfdopenfiledialog</span></a>, <a href="tinydialogs/bindings.html#tinyfdinputbox,cstring,cstring,cstring"><span class="Identifier">tinyfdinputbox</span></a>, <a href="tinydialogs/bindings.html#tinyfdnotifypopup,cstring,cstring,cstring"><span class="Identifier">tinyfdnotifypopup</span></a>, <a href="tinydialogs/bindings.html#tinyfdsilent"><span class="Identifier">tinyfdsilent</span></a>
+    <a href="tinydialogs/bindings.html#tinyfd_needs"><span class="Identifier">tinyfd_needs</span></a>, <a href="tinydialogs/bindings.html#tinyfd_colorChooser,cstring,cstring,array[,uint8],array[,uint8]"><span class="Identifier">tinyfd_colorChooser</span></a>, <a href="tinydialogs/bindings.html#tinyfd_verbose"><span class="Identifier">tinyfd_verbose</span></a>, <a href="tinydialogs/bindings.html#tinyfd_messageBox,cstring,cstring,cstring,cstring,cint"><span class="Identifier">tinyfd_messageBox</span></a>, <a href="tinydialogs/bindings.html#tinyfd_setGlobalInt,cstring,cint"><span class="Identifier">tinyfd_setGlobalInt</span></a>, <a href="tinydialogs/bindings.html#tinyfd_getGlobalChar,cstring"><span class="Identifier">tinyfd_getGlobalChar</span></a>, <a href="tinydialogs/bindings.html#tinyfd_getGlobalInt,cstring"><span class="Identifier">tinyfd_getGlobalInt</span></a>, <a href="tinydialogs/bindings.html#tinyfd_response"><span class="Identifier">tinyfd_response</span></a>, <a href="tinydialogs/bindings.html#tinyfd_forceConsole"><span class="Identifier">tinyfd_forceConsole</span></a>, <a href="tinydialogs/bindings.html#tinyfd_assumeGraphicDisplay"><span class="Identifier">tinyfd_assumeGraphicDisplay</span></a>, <a href="tinydialogs/bindings.html#tinyfd_allowCursesDialogs"><span class="Identifier">tinyfd_allowCursesDialogs</span></a>, <a href="tinydialogs/bindings.html#tinyfd_saveFileDialog,cstring,cstring,cint,ptr.cstring,cstring"><span class="Identifier">tinyfd_saveFileDialog</span></a>, <a href="tinydialogs/bindings.html#tinyfd_beep"><span class="Identifier">tinyfd_beep</span></a>, <a href="tinydialogs/bindings.html#tinyfd_version"><span class="Identifier">tinyfd_version</span></a>, <a href="tinydialogs/bindings.html#tinyfd_selectFolderDialog,cstring,cstring"><span class="Identifier">tinyfd_selectFolderDialog</span></a>, <a href="tinydialogs/bindings.html#tinyfd_openFileDialog,cstring,cstring,cint,ptr.cstring,cstring,cint"><span class="Identifier">tinyfd_openFileDialog</span></a>, <a href="tinydialogs/bindings.html#tinyfd_inputBox,cstring,cstring,cstring"><span class="Identifier">tinyfd_inputBox</span></a>, <a href="tinydialogs/bindings.html#tinyfd_notifyPopup,cstring,cstring,cstring"><span class="Identifier">tinyfd_notifyPopup</span></a>, <a href="tinydialogs/bindings.html#tinyfd_silent"><span class="Identifier">tinyfd_silent</span></a>
   </dl>
 </div>
 
@@ -384,7 +386,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2025-10-10 12:37:34 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2025-10-10 15:00:10 UTC</small>
       </div>
     </div>
   </div>
