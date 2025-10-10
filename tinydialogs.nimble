@@ -1,11 +1,11 @@
 # Package
 
-version       = "1.1.0"
-author        = "Patitotective"
-description   = "Tiny file dialogs bindings for Nim"
-license       = "MIT"
-srcDir        = "src"
-skipFiles     = @["tinydialogs/gen.nim"]
+version = "1.1.1"
+author = "Patitotective"
+description = "Tiny file dialogs bindings for Nim"
+license = "MIT"
+srcDir = "src"
+skipFiles = @["tinydialogs/gen.nim"]
 
 # Dependencies
 
