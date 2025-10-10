@@ -10,11 +10,19 @@ import tinydialogs
 
 beep()
 notifyPopup("Message", "You just received a message from Beef", Info)
-echo messageBox("Hey", "Do you want to receive more notifications?", YesNo, Question, Yes)
+echo messageBox(
+  "Hey", "Do you want to receive more notifications?", YesNo, Question, Yes
+)
 echo inputBox("Name", "Please enter your password :]", "")
-echo saveFileDialog("Save the file", getCurrentDir() / "\0", ["*.txt", "*.text"], "Text file") # "\0" for an emtpy file
-echo openFileDialog("Open the file", getCurrentDir() / "\0", ["*.txt", "*.text"], "Text file")
-echo openMultipleFilesDialog("Open the files", getCurrentDir() / "\0", ["*.txt", "*.text"], "Text files")
+echo saveFileDialog(
+  "Save the file", getCurrentDir() / "\0", ["*.txt", "*.text"], "Text file"
+) # "\0" for an emtpy file
+echo openFileDialog(
+  "Open the file", getCurrentDir() / "\0", ["*.txt", "*.text"], "Text file"
+)
+echo openMultipleFilesDialog(
+  "Open the files", getCurrentDir() / "\0", ["*.txt", "*.text"], "Text files"
+)
 echo selectFolderDialog("Open the directory of the file", getCurrentDir())
 echo colorChooser("Choose a color")
 echo colorChooser("Choose a color", "#000000") # Hex
