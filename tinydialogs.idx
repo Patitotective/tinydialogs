@@ -13,15 +13,15 @@ nim	Cancel	tinydialogs.html#Cancel	Button.Cancel		43
 nim	Yes	tinydialogs.html#Yes	Button.Yes		43
 nim	No	tinydialogs.html#No	Button.No		43
 nim	Button	tinydialogs.html#Button	enum Button		43
-nim	beep	tinydialogs.html#beep	proc beep()		48
-nim	notifyPopup	tinydialogs.html#notifyPopup,string,string,IconType	proc notifyPopup(title, message: string; iconType: IconType)		52
-nim	messageBox	tinydialogs.html#messageBox,string,string,DialogType,IconType,Button	proc messageBox(title, message: string; dialogType: DialogType; iconType: IconType;\n           defaultButton: Button): Button		58
-nim	inputBox	tinydialogs.html#inputBox,string,string,string	proc inputBox(title, message, defaultInput: string): string		74
-nim	saveFileDialog	tinydialogs.html#saveFileDialog,string,string,openArray[string],string	proc saveFileDialog(title, defaultPath: string;\n               filterPatterns: openArray[string] = [];\n               singleFilterDescription = ""): string		84
-nim	openFileDialog	tinydialogs.html#openFileDialog,string,string,openArray[string],string	proc openFileDialog(title, defaultPath: string;\n               filterPatterns: openArray[string] = [];\n               singleFilterDescription = ""): string		113
-nim	openMultipleFilesDialog	tinydialogs.html#openMultipleFilesDialog,string,string,openArray[string],string	proc openMultipleFilesDialog(title, defaultPath: string;\n                        filterPatterns: openArray[string] = [];\n                        singleFilterDescription = ""): seq[string]		143
-nim	selectFolderDialog	tinydialogs.html#selectFolderDialog,string,string	proc selectFolderDialog(title, defaultPath: string): string		175
-nim	colorChooser	tinydialogs.html#colorChooser,string,string	proc colorChooser(title = ""; defaultHexRGB = ""): tuple[hex: string,\n    rgb: array[3, byte]]		180
-nim	colorChooser	tinydialogs.html#colorChooser,string,array[,byte]	proc colorChooser(title: string; defaultRGB: array[3, byte]): tuple[hex: string,\n    rgb: array[3, byte]]		194
-nimgrp	colorchooser	tinydialogs.html#colorChooser-procs-all	proc		180
+nim	beep	tinydialogs.html#beep	proc beep()		54
+nim	notifyPopup	tinydialogs.html#notifyPopup,string,string,IconType	proc notifyPopup(title, message: string; iconType: IconType)		58
+nim	messageBox	tinydialogs.html#messageBox,string,string,DialogType,IconType,Button	proc messageBox(title, message: string; dialogType: DialogType; iconType: IconType;\n           defaultButton: Button): Button		64
+nim	inputBox	tinydialogs.html#inputBox,string,string,string	proc inputBox(title, message, defaultInput: string): string		80
+nim	saveFileDialog	tinydialogs.html#saveFileDialog,string,string,openArray[string],string	proc saveFileDialog(title, defaultPath: string;\n               filterPatterns: openArray[string] = [];\n               singleFilterDescription = ""): string		90
+nim	openFileDialog	tinydialogs.html#openFileDialog,string,string,openArray[string],string	proc openFileDialog(title, defaultPath: string;\n               filterPatterns: openArray[string] = [];\n               singleFilterDescription = ""): string		119
+nim	openMultipleFilesDialog	tinydialogs.html#openMultipleFilesDialog,string,string,openArray[string],string	proc openMultipleFilesDialog(title, defaultPath: string;\n                        filterPatterns: openArray[string] = [];\n                        singleFilterDescription = ""): seq[string]		149
+nim	selectFolderDialog	tinydialogs.html#selectFolderDialog,string,string	proc selectFolderDialog(title, defaultPath: string): string		181
+nim	colorChooser	tinydialogs.html#colorChooser,string,string	proc colorChooser(title = ""; defaultHexRGB = ""): tuple[hex: string,\n    rgb: array[3, byte]]		186
+nim	colorChooser	tinydialogs.html#colorChooser,string,array[,byte]	proc colorChooser(title: string; defaultRGB: array[3, byte]): tuple[hex: string,\n    rgb: array[3, byte]]		200
+nimgrp	colorchooser	tinydialogs.html#colorChooser-procs-all	proc		186
 heading	Example	tinydialogs.html#example	  Example		0
