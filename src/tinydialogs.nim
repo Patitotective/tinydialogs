@@ -45,6 +45,12 @@ type
     Yes ## Ok/Yes
     No ## No in DialogType.YesNoCancel
 
+template nilOrCstring(s: string): cstring =
+  if s.len > 0:
+    cstring s
+  else:
+    nil
+
 proc beep*() =
   ## A beep sound.
   tinyfd_beep()
@@ -64,10 +70,10 @@ proc messageBox*(
   ## `message` may contain `\n\t`.
   ## Returns the clicked Button.
   Button tinyfd_messageBox(
-    aTitle = cstring title,
-    aMessage = cstring message,
-    aDialogType = cstring $dialogType,
-    aIconType = cstring $iconType,
+    aTitle = nilOrCstring title,
+    aMessage = nilOrCstring message,
+    aDialogType = nilOrCstring $dialogType,
+    aIconType = nilOrCstring $iconType,
     aDefaultButton = cint defaultButton,
   )
 
@@ -76,9 +82,9 @@ proc inputBox*(title, message, defaultInput: string): string =
   ##
   ## Use `""` in `defaultInput` for a password box or something else for an input box. ([#1](https://github.com/Patitotective/tinydialogs/issues/1) related)
   $tinyfd_inputBox(
-    aTitle = cstring title,
-    aMessage = cstring message,
-    aDefaultInput = cstring defaultInput,
+    aTitle = nilOrCstring title,
+    aMessage = nilOrCstring message,
+    aDefaultInput = nilOrCstring defaultInput,
   )
 
 proc saveFileDialog*(
@@ -96,18 +102,18 @@ proc saveFileDialog*(
 
   let filterPatterns = collect:
     for patt in filterPatterns:
-      cstring patt
+      nilOrCstring patt
 
   $tinyfd_saveFileDialog(
-    aTitle = cstring title,
-    aDefaultPathAndFile = cstring defaultPath,
+    aTitle = nilOrCstring title,
+    aDefaultPathAndFile = nilOrCstring defaultPath,
     aNumOfFilterPatterns = cint filterPatterns.len,
     aFilterPatterns =
       if filterPatterns.len == 0:
         nil
       else:
         cast[ptr cstring](filterPatterns[0].unsafeAddr),
-    aSingleFilterDescription = cstring singleFilterDescription,
+    aSingleFilterDescription = nilOrCstring singleFilterDescription,
   )
 
 proc openFileDialog*(
@@ -125,18 +131,18 @@ proc openFileDialog*(
 
   let filterPatterns = collect:
     for patt in filterPatterns:
-      cstring patt
+      nilOrCstring patt
 
   $tinyfd_openFileDialog(
-    aTitle = cstring title,
-    aDefaultPathAndFile = cstring defaultPath,
+    aTitle = nilOrCstring title,
+    aDefaultPathAndFile = nilOrCstring defaultPath,
     aNumOfFilterPatterns = cint filterPatterns.len,
     aFilterPatterns =
       if filterPatterns.len == 0:
         nil
       else:
         cast[ptr cstring](filterPatterns[0].unsafeAddr),
-    aSingleFilterDescription = cstring singleFilterDescription,
+    aSingleFilterDescription = nilOrCstring singleFilterDescription,
     aAllowMultipleSelects = cint 0,
   )
 
@@ -155,18 +161,18 @@ proc openMultipleFilesDialog*(
 
   let filterPatterns = collect:
     for patt in filterPatterns:
-      cstring patt
+      nilOrCstring patt
 
   let paths = tinyfd_openFileDialog(
-    aTitle = cstring title,
-    aDefaultPathAndFile = cstring defaultPath,
+    aTitle = nilOrCstring title,
+    aDefaultPathAndFile = nilOrCstring defaultPath,
     aNumOfFilterPatterns = cint filterPatterns.len,
     aFilterPatterns =
       if filterPatterns.len == 0:
         nil
       else:
         cast[ptr cstring](filterPatterns[0].unsafeAddr),
-    aSingleFilterDescription = cstring singleFilterDescription,
+    aSingleFilterDescription = nilOrCstring singleFilterDescription,
     aAllowMultipleSelects = cint 1,
   )
   if paths.len > 0:
@@ -175,7 +181,7 @@ proc openMultipleFilesDialog*(
 proc selectFolderDialog*(title, defaultPath: string): string =
   ## Returns the selected folder (or empty when cancelled).
 
-  $tinyfd_selectFolderDialog(cstring title, cstring defaultPath)
+  $tinyfd_selectFolderDialog(nilOrCstring title, nilOrCstring defaultPath)
 
 proc colorChooser*(
     title = "", defaultHexRGB = ""
@@ -184,8 +190,8 @@ proc colorChooser*(
   var rgb: array[3, byte]
   result.hex =
     $tinyfd_colorChooser(
-      aTitle = cstring title,
-      aDefaultHexRGB = cstring defaultHexRGB,
+      aTitle = nilOrCstring title,
+      aDefaultHexRGB = nilOrCstring defaultHexRGB,
       aDefaultRGB = rgb,
       aoResultRGB = rgb,
     )
